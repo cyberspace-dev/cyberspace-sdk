@@ -1,0 +1,38 @@
+{
+  "name": "@cyberspace-dev/sdk",
+  "version": "0.0.62",
+  "description": "Cyberspace - Online Competition For Coders",
+  "keywords": [
+    "online",
+    "game",
+    "javascript",
+    "typescript",
+    "programming",
+    "learning"
+  ],
+  "author": "Robot",
+  "license": "ISC",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "start": "node lib/index.js",
+    "build": "tsc",
+    "update": "rm -rf ./src/openlib && cp -r ./../../3-libraries/1-openlib/src ./src/openlib",
+    "release": "rm -rf src && npm publish --access public && git reset --hard HEAD",
+    "postversion": "git push --tags && git push"
+  },
+  "dependencies": {
+    "delay": "^5.0.0",
+    "rxjs": "^7.4.0",
+    "socket.io-client": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.11",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyberspace-dev/cyberspace-sdk"
+  }
+}

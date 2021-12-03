@@ -1,45 +1,77 @@
+### **Cyberspace.dev - Online Game For Developers**
+
+![alt text](https://cyberspace.dev/assets/img/pages/master/social.png)
+
 ### **Description**
 
-Hi pilot ! Cyberspace.dev is first online game for developers! In the game, you are the control center of spaceships in the universe, the game has a fairly simple game model and does not require much time to start. This is an excellent platform for both manned control and for the development of automation scripts and even artificial intelligence!
+Hi Pilot !
 
-### **Limitations**
+Cyberspace.dev - online competition for coders! The game has a fairly simple game model and does not require much time to start. This is an excellent platform for both manned control and for the development of automation scripts and even artificial intelligence!
 
-The API limits the number of executed <b>commands to 5 p/s</b>, you will be disconnected if you exceed these limits.
+Our website: https://cyberspace.dev
+
+### **Quotas**
+
+Max requests: <b>5</b> p/s <br/>
 
 ### **Quick start**
 
 Install module as npm package
 
 ```typescript
-npm install @cyberspace/sdk
+npm install @cyberspace-dev/sdk
 ```
 
-1. Connect to account service and signin
+Import type from package
 
 ```typescript
-const account = await SDK.Account.connect();
-await account.signin('email@mail.com', 'password');
+import {Account} from "@cyberspace-dev/sdk";
 ```
 
-2. Look at what objects you own and select any ship
+If you are trying to connect from the frontend side then use the following code to disable version checker
+
+```typescript
+Utils.disableCheck = true;
+```
+
+Connect to account service and signin
+
+```typescript
+const account = await Account.connect();
+await account.signin('your@email.com', 'password');
+```
+
+Look at objects you own and select any ship
 
 ```typescript
 const objects = await account.objects();
-const target = objects.find((instance: any) => instance.type === 'Ship');
+const instance = objects.find((object: any) => object.type === 'Ship');
 ```
 
-3. Take control over your ship
+If you don't have a ship yet, use the following method to create a new one.
 
 ```typescript
-const quadrant = await SDK.Sector.connect(target.realm);
-const ship = await quadrant.get(target.uuid); 
+await account.assemble();
 ```
 
-4. Escape from the planet and move to any point in the system
+Take control over your ship
+
+```typescript
+const {uuid, system} = instance;
+const ship = await account.getShip(uuid, system);
+```
+
+Escape from the planet and explore other commands in our wiki
 
 ```typescript
 await ship.escape();
-await ship.move(800, 800);
 ```
 
-Congratulations, you're spaceman ! Welcome to the family !
+You can dispose the ship if you no longer need it because it consumes 1 connection
+
+```typescript
+ship.dispose();
+```
+
+Congratulations!<br /> Please read our wiki: https://github.com/cyberspace-dev/cyberspace-sdk/wiki<br />
+You also can download the starter project from https://cyberspace.dev/assets/starters/starter.zip

@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2017",
+        "declaration": true,
+        "removeComments": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "outDir": "lib/"
+    },
+    "include": [
+        "src/**/**.ts"
+    ]
+}
