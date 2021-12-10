@@ -129,7 +129,7 @@ export class Account extends Base {
     // --- SECURED -----------------------------------------------------------------------------------------------------
 
     @Base.request(SignalType.RECEIVE_OBJECTS)
-    public async objects(count?: number, offset?: number): Promise<Array<IObject>> {
+    public async objects(count?: number, offset?: number): Promise<{objects: Array<IObject>, hasNext: boolean}> {
         const {token} = this;
 
         return {
