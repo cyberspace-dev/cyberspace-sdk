@@ -9,4 +9,4 @@ community_bridge: # Replace with a single Community Bridge project-name e.g., cl
 liberapay: # Replace with a single Liberapay username
 issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
-custom: ['https://cyberspace.dev/dontations/5', 'https://cyberspace.dev/donations/20', 'https://cyberspace.dev/donations/100']
+custom: ['https://cyberspace.dev/dontations']
