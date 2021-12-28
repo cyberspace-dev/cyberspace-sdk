@@ -77,4 +77,4 @@ ship.dispose();
 ```
 
 Congratulations!<br /> Please read our wiki: https://github.com/cyberspace-dev/cyberspace-sdk/wiki <br />
-You also can download the starter project from https://cyberspace.dev/assets/starters/starter.zip
+You also can download the starter project from https://cyberspace.dev/assets/starter/nodejs.zip
