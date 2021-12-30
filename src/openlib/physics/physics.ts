@@ -11,7 +11,9 @@ export class Physics {
 
     // --- METHODS [PUBLIC] --------------------------------------------------------------------------------------------
 
-    public direction(angle1: any, angle2: any) {
+    public direction(angle1: any, angle2: any, original: number) {
+        const source = Math.abs(angle1 - angle2);
+
         let start = angle1;
         let diff = Math.abs(start - angle2);
         let counter1 = 0;
@@ -39,9 +41,12 @@ export class Physics {
             if (counter2 >= 125) break;
         }
 
-        if (counter1 > counter2) return -ANGLE_CHANGE;
+        const ORG = original / 1000;
+        const CHANGE = source > 0.72 ? (ORG > 0.036 ? (ORG + 0.018) : 0.036) : 0.036;
 
-        return ANGLE_CHANGE;
+        if (counter1 > counter2) return -CHANGE;
+
+        return CHANGE;
     }
 
     public distance(vector: IVector, target: IVector, squared?: boolean): number {
@@ -78,11 +83,11 @@ export class Physics {
         return this.compress(point);
     }
 
-    public move(vector: IVector, target: IVector, speed: number): IVector {
+    public move(vector: IVector, target: IVector, speed: number, original: number): IVector {
         const angle = this.angle(vector, target);
 
         const diff = Math.abs(vector.a - angle);
-        if (diff > 0.05) vector.a += this.direction(vector.a, angle);
+        if (diff > 0.05) vector.a += this.direction(vector.a, angle, original);
 
         if (vector.a < -Math.PI) vector.a = Math.PI;
         if (vector.a > Math.PI) vector.a = -Math.PI;

@@ -100,12 +100,12 @@ export class Stock extends Base {
     }
 
     @Base.request(SignalType.EXCHANGE_SUCCESS)
-    public async exchange(quadrant: string, coins: number): Promise<{uuid: string}> {
+    public async exchange(target: string, coins: number): Promise<{uuid: string}> {
         const {token} = this;
 
         return {
             type: SignalType.EXCHANGE,
-            payload: {quadrant, coins},
+            payload: {target, coins},
             emitter: [],
             catcher: [],
             secure: token,
@@ -114,12 +114,12 @@ export class Stock extends Base {
     }
 
     @Base.request(SignalType.EXCHANGE_CANCELED)
-    public async cancel(quadrant: string) {
+    public async cancel(target: string) {
         const {token} = this;
 
         return {
             type: SignalType.EXCHANGE_CANCEL,
-            payload: {quadrant},
+            payload: {target},
             emitter: [],
             catcher: [],
             secure: token,

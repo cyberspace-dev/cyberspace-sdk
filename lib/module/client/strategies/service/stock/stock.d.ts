@@ -20,10 +20,10 @@ export declare class Stock extends Base {
     }>;
     withdraw(coins: number, address: string): Promise<any>;
     info(): Promise<any>;
-    exchange(quadrant: string, coins: number): Promise<{
+    exchange(target: string, coins: number): Promise<{
         uuid: string;
     }>;
-    cancel(quadrant: string): Promise<any>;
+    cancel(target: string): Promise<any>;
     apply(uuid: string): Promise<any>;
     profit(): Promise<any>;
     static connect(token?: string): Promise<Stock>;
