@@ -1,8 +1,8 @@
-import * as pify            from 'pify';
-
 import {ISignal}            from '../interfaces/signal/signal';
 import {SignalType}         from '../enums/signal/type';
 import {SignalDirection}    from '../enums/signal/direction';
+
+const pify = require('pify');
 
 export class Utils {
 
