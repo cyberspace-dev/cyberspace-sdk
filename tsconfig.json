@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es2017",
+        "module": "esnext",
+        "target": "esnext",
         "declaration": true,
         "removeComments": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "outDir": "lib/"
+        "outDir": "lib/",
+        "moduleResolution": "Node"
     },
     "include": [
         "src/**/**.ts"
