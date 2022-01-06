@@ -1,11 +1,9 @@
+import * as pify            from 'pify';
 import * as jwt             from 'jsonwebtoken';
 
-import {promisify}          from 'util';
 import {ISignal}            from '../interfaces/signal/signal';
 import {SignalType}         from '../enums/signal/type';
 import {SignalDirection}    from '../enums/signal/direction';
-
-const jwtVerify = promisify(jwt.verify);
 
 export class Utils {
 
@@ -80,7 +78,10 @@ export class Utils {
     // -----------------------------------------------------------------------------------------------------------------
 
     public static async verify(token: string) {
-        return jwtVerify(token, process.env.SECRET);
+        const {env: {SECRET}} = process;
+        const verify = pify(jwt.verify);
+
+        return verify(token, SECRET);
     }
 
     public static async save(instance: any) {
