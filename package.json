@@ -25,7 +25,6 @@
     "delay": "^5.0.0",
     "rxjs": "^7.5.1",
     "socket.io-client": "^4.4.0",
-    "jsonwebtoken": "^8.5.1",
     "pify": "^5.0.0"
   },
   "devDependencies": {
