@@ -1,5 +1,4 @@
 import * as pify            from 'pify';
-import * as jwt             from 'jsonwebtoken';
 
 import {ISignal}            from '../interfaces/signal/signal';
 import {SignalType}         from '../enums/signal/type';
@@ -14,10 +13,6 @@ export class Utils {
             let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
-    }
-
-    public static jwt(payload: any, isPermanent?: boolean): string {
-        return jwt.sign(payload, process.env.SECRET, isPermanent ? null : { expiresIn: "2 days" });
     }
 
     public static marker(isMaster: boolean): string {
@@ -77,7 +72,11 @@ export class Utils {
 
     // -----------------------------------------------------------------------------------------------------------------
 
-    public static async verify(token: string) {
+    public static async jwt(jwt: any, payload: any, isPermanent?: boolean): Promise<string> {
+        return jwt.sign(payload, process.env.SECRET, isPermanent ? null : { expiresIn: "2 days" });
+    }
+
+    public static async verify(jwt: any, token: string) {
         const {env: {SECRET}} = process;
         const verify = pify(jwt.verify);
 
