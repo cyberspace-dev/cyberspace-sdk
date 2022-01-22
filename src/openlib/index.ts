@@ -2,6 +2,7 @@ export {Physics}                        from './physics/physics';
 export {IVector}                        from './physics/interfaces/vector';
 export {LL}                             from './settings/enums/logs/level';
 export {Settings}                       from './settings/enums/signatures/core/settings/settings';
+export {StrategyType}                   from './settings/enums/strategy/strategy';
 export {SignalDirection}                from './settings/enums/signal/direction';
 export {SignalType}                     from './settings/enums/signal/type';
 export {CommandType}                    from "./settings/enums/signatures/sdk/command/type";
@@ -16,6 +17,7 @@ export {SecurityLevel}                  from './settings/enums/signatures/web/se
 export {SpaceObject}                    from './settings/enums/signatures/web/space/object';
 export {Events}                         from './settings/enums/signatures/web/events/events';
 export {ISignal}                        from './settings/interfaces/signal/signal';
+export {IStrategy}                      from './settings/interfaces/strategy/strategy';
 export {IObject}                        from './settings/interfaces/signatures/auth/object/object';
 export {IProfile}                       from './settings/interfaces/signatures/auth/profile/profile';
 export {IEntityModel}                   from './settings/interfaces/signatures/core/entity/entity';

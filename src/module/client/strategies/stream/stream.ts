@@ -1,5 +1,4 @@
 import {Subject}    from 'rxjs';
-
 import {Base}       from '../../base/base';
 
 export class Stream extends Base {

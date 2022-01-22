@@ -5,7 +5,7 @@ export declare class NodeBase extends Base {
     socket: any;
     subject: Subject<any>;
     uuid: string;
-    token: string;
-    constructor(socket: any, subject: Subject<any>, uuid: string, token: string);
+    secure: string;
+    constructor(socket: any, subject: Subject<any>, uuid: string, secure: string);
     explore(): Promise<IEntityModel>;
 }

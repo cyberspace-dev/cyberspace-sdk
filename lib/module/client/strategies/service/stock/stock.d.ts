@@ -4,8 +4,8 @@ import { IBid } from '../../../../../openlib';
 export declare class Stock extends Base {
     socket: any;
     subject: Subject<any>;
-    token: string;
-    constructor(socket: any, subject: Subject<any>, token: string);
+    secure: string;
+    constructor(socket: any, subject: Subject<any>, secure: string);
     bids(): Promise<{
         records: Array<IBid>;
     }>;

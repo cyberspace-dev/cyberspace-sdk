@@ -1,10 +1,11 @@
-import {Subject}    from 'rxjs';
+import {Subject}            from 'rxjs';
 
-import {Ship}       from './nodes/signatures/ship/ship';
-import {Planet}     from './nodes/signatures/planet/planet';
-import {Base}       from '../../base/base';
-import {Utils}      from '../../../utils/utils';
-import {SignalType} from '../../../../openlib';
+import {Ship}               from './nodes/signatures/ship/ship';
+import {Planet}             from './nodes/signatures/planet/planet';
+import {Base}               from '../../base/base';
+import {Utils}              from '../../../utils/utils';
+import {SignalType}         from '../../../../openlib';
+import {SignalDirection}    from '../../../../openlib';
 
 export class Play extends Base {
 
@@ -13,7 +14,7 @@ export class Play extends Base {
     constructor(
         public socket   : any,
         public subject  : Subject<any>,
-        public token    : string
+        public secure   : string
     ) {
         super(socket, subject);
     }
@@ -21,24 +22,24 @@ export class Play extends Base {
     // --- METHODS [PUBLIC ASYNC] --------------------------------------------------------------------------------------
 
     public async get(uuid: string): Promise<Ship | Planet> {
-        const {socket, subject, token} = this;
+        const {socket, subject, secure} = this;
 
         const signal = {
+            direction: SignalDirection.OUT,
             type: SignalType.EXPLORE,
             payload: {},
             emitter: [],
             catcher: [uuid],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
 
         const response: any = await Utils.promisify(socket, subject, signal);
         if (response.type === SignalType.EXPLORE_SUCCESS) {
             switch(response.payload.type) {
                 case 'Ship':
-                    return new Ship(socket, subject, uuid, token);
+                    return new Ship(socket, subject, uuid, secure);
                 case 'Planet':
-                    return new Planet(socket, subject, uuid, token);
+                    return new Planet(socket, subject, uuid, secure);
             }
 
             response.payload.reason = 'UNEXPECTED_TYPE';

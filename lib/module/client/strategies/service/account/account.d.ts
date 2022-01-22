@@ -3,13 +3,13 @@ import { Ship } from '../../play/nodes/signatures/ship/ship';
 import { Planet } from '../../play/nodes/signatures/planet/planet';
 import { Base } from '../../../base/base';
 import { IObject } from '../../../../../openlib';
-import { Quadrants } from '../../../../../openlib';
 import { IProfile } from '../../../../../openlib';
+import { Quadrants } from '../../../../../openlib';
 export declare class Account extends Base {
     socket: any;
     subject: Subject<any>;
     competition: any;
-    token: string;
+    secure: string;
     constructor(socket: any, subject: Subject<any>, competition: any);
     signin(email: string, password: string): Promise<any>;
     getShip(uuid: string, system: string): Promise<Ship>;

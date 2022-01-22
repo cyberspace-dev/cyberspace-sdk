@@ -1,8 +1,9 @@
-import {io}             from 'socket.io-client';
-import {Subject}        from 'rxjs';
+import {io}                 from 'socket.io-client';
+import {Subject}            from 'rxjs';
 
-import {Utils}          from '../../..';
-import {SignalType}     from '../../..';
+import {Utils}              from '../../..';
+import {SignalType}         from '../../..';
+import {SignalDirection}    from '../../../openlib';
 
 export class Base {
 
@@ -16,8 +17,10 @@ export class Base {
     // --- METHODS [PUBLIC] --------------------------------------------------------------------------------------------
 
     public dispose() {
-        this.socket.destroy();
-        this.subject.complete();
+        const {socket, subject} = this;
+
+        const items = [socket, subject];
+        for (const item of items) item.destroy();
     }
 
     // --- METHODS [STATIC] --------------------------------------------------------------------------------------------
@@ -64,9 +67,9 @@ export class Base {
             const socket = io(host, options);
             socket.on('connect', () => {
                 const signal: any = {
-                    type: 'CHANGE_STRATEGY',
+                    type: SignalType.CHANGE_STRATEGY,
                     payload: {strategy, channel},
-                    direction: 'IN',
+                    direction: SignalDirection.IN,
                     emitter: [],
                     catcher: []
                 };
@@ -77,7 +80,7 @@ export class Base {
             });
 
             socket.on('message', (signal: any) => {
-                if (signal.type === 'CHANGE_STRATEGY')
+                if (signal.type === SignalType.CHANGE_STRATEGY)
                     return resolve({socket, subject});
 
                 subject.next(signal);

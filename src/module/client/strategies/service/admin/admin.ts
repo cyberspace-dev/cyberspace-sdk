@@ -22,10 +22,10 @@ export class Admin extends Base {
 
     // --- SECTION [METHODS] -------------------------------------------------------------------------------------------
 
-    @Base.request('GET_BY_ID' as SignalType)
+    @Base.request(SignalType.GET_BY_ID)
     public async get(id: number): Promise<IProfile> {
         return {
-            type: 'GET_BY_ID' as SignalType,
+            type: SignalType.GET_BY_ID,
             payload: {id},
             emitter: [],
             catcher: [],
@@ -33,10 +33,10 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request('GET_LAST_ID' as SignalType)
+    @Base.request(SignalType.GET_LAST_ID)
     public async last(): Promise<IProfile> {
         return {
-            type: 'GET_LAST_ID' as SignalType,
+            type: SignalType.GET_LAST_ID,
             payload: {},
             emitter: [],
             catcher: [],
@@ -46,13 +46,13 @@ export class Admin extends Base {
 
     // --- METHODS [PRIVATE OPEN] --------------------------------------------------------------------------------------
 
-    @Base.request('INJECT' as SignalType)
+    @Base.request(SignalType.INJECT)
     private async inject(fund: number, start: number, finish: number, version: string, companies: Array<any>) {
         const {token} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'INJECT' as SignalType,
+            type: SignalType.INJECT,
             payload: {fund, start, finish, version, companies},
             emitter: [],
             catcher: [],
@@ -60,13 +60,13 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request('ACTION' as SignalType)
+    @Base.request(SignalType.ACTION)
     private async action(type: string) {
         const {token} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'ACTION' as SignalType,
+            type: SignalType.ACTION,
             payload: {type},
             emitter: [],
             catcher: [],
@@ -74,13 +74,13 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request('FEED' as SignalType)
+    @Base.request(SignalType.FEED)
     private async feed() {
         const {token} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'FEED' as SignalType,
+            type: SignalType.FEED,
             payload: {},
             emitter: [],
             catcher: [],
@@ -88,13 +88,13 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request('WITHDRAWL' as SignalType)
+    @Base.request(SignalType.WITHDRAWL)
     private async withdrawl() {
         const {token} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'WITHDRAWL' as SignalType,
+            type: SignalType.WITHDRAWL,
             payload: {},
             emitter: [],
             catcher: [],
@@ -102,13 +102,13 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request('CONFIRM' as SignalType)
+    @Base.request(SignalType.CONFIRM)
     private async confirm(uuid: string, confirmation: string) {
         const {token} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'CONFIRM' as SignalType,
+            type: SignalType.CONFIRM,
             payload: {uuid, confirmation},
             emitter: [],
             catcher: [],
@@ -116,13 +116,13 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request('LEADS' as SignalType)
+    @Base.request(SignalType.LEADS)
     private async leads() {
         const {token} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'LEADS' as SignalType,
+            type: SignalType.LEADS,
             payload: {},
             emitter: [],
             catcher: [],
@@ -130,13 +130,13 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request('PROCESS' as SignalType)
+    @Base.request(SignalType.PROCESS)
     private async process(type: string) {
         const {token} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'PROCESS' as SignalType,
+            type: SignalType.PROCESS,
             payload: {type},
             emitter: [],
             catcher: [],
@@ -144,13 +144,13 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request('CREATE' as SignalType)
+    @Base.request(SignalType.CREATE)
     private async create(url: string) {
         const {token} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'CREATE' as SignalType,
+            type: SignalType.CREATE,
             payload: {url},
             emitter: [],
             catcher: [],

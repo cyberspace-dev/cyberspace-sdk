@@ -1,8 +1,9 @@
-import {Subject}    from 'rxjs';
+import {Subject}            from 'rxjs';
 
-import {Base}       from '../../../base/base';
-import {IBid}       from '../../../../../openlib';
-import {SignalType} from '../../../../../openlib';
+import {Base}               from '../../../base/base';
+import {IBid}               from '../../../../../openlib';
+import {SignalDirection}    from '../../../../../openlib';
+import {SignalType}         from '../../../../../openlib';
 
 export class Stock extends Base {
 
@@ -11,7 +12,7 @@ export class Stock extends Base {
     constructor(
         public socket   : any,
         public subject  : Subject<any>,
-        public token    : string
+        public secure   : string
     ) {
         super(socket, subject);
     }
@@ -21,137 +22,137 @@ export class Stock extends Base {
     @Base.request(SignalType.BIDS)
     public async bids(): Promise<{records: Array<IBid>}> {
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.BIDS,
             payload: {},
             emitter: [],
-            catcher: [],
-            direction: 'out'
+            catcher: []
         } as any;
     }
 
     @Base.request(SignalType.CHARGE)
     public async charge(coins: number): Promise<{url: string}> {
-        const {token} = this;
+        const {secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.CHARGE,
             payload: {coins},
             emitter: [],
             catcher: [],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 
     @Base.request(SignalType.BALANCE)
     public async balance(): Promise<{balance: number}> {
-        const {token} = this;
+        const {secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.BALANCE,
             payload: {},
             emitter: [],
             catcher: [],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 
     @Base.request(SignalType.HISTORY)
     public async history(count: number, offset?: number): Promise<{records: Array<IBid>}> {
-        const {token} = this;
+        const {secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.HISTORY,
             payload: {count, offset},
             emitter: [],
             catcher: [],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 
     @Base.request(SignalType.WITHDRAW_SUCCESS)
     public async withdraw(coins: number, address: string) {
-        const {token} = this;
+        const {secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.WITHDRAW,
             payload: {coins, address},
             emitter: [],
             catcher: [],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 
     @Base.request(SignalType.DEPOSIT_INFO_SUCCESS)
     public async info(): Promise<any> {
-        const {token} = this;
+        const {secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.DEPOSIT_INFO,
             payload: {},
             emitter: [],
             catcher: [],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 
     @Base.request(SignalType.EXCHANGE_SUCCESS)
     public async exchange(target: string, coins: number): Promise<{uuid: string}> {
-        const {token} = this;
+        const {secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.EXCHANGE,
             payload: {target, coins},
             emitter: [],
             catcher: [],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 
     @Base.request(SignalType.EXCHANGE_CANCELED)
     public async cancel(target: string) {
-        const {token} = this;
+        const {secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.EXCHANGE_CANCEL,
             payload: {target},
             emitter: [],
             catcher: [],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 
     @Base.request(SignalType.APPLY_SUCCESS)
     public async apply(uuid: string) {
-        const {token} = this;
+        const {secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.APPLY,
             payload: {uuid},
             emitter: [],
             catcher: [],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 
     @Base.request(SignalType.PROFIT)
     public async profit() {
-        const {token} = this;
+        const {secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.PROFIT,
             payload: {},
             emitter: [],
             catcher: [],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 

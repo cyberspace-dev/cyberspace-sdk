@@ -1,7 +1,8 @@
-import {Subject}        from 'rxjs';
-import {Base}           from '../../../../base/base';
-import {SignalType}     from '../../../../../../openlib';
-import {IEntityModel}   from '../../../../../../openlib';
+import {Subject}            from 'rxjs';
+import {Base}               from '../../../../base/base';
+import {SignalType}         from '../../../../../../openlib';
+import {SignalDirection}    from '../../../../../../openlib';
+import {IEntityModel}       from '../../../../../../openlib';
 
 export class NodeBase extends Base {
 
@@ -11,7 +12,7 @@ export class NodeBase extends Base {
         public socket   : any,
         public subject  : Subject<any>,
         public uuid     : string,
-        public token    : string
+        public secure   : string
     ) {
         super(socket, subject);
     }
@@ -20,15 +21,15 @@ export class NodeBase extends Base {
 
     @Base.request(SignalType.EXPLORE_SUCCESS)
     public async explore(): Promise<IEntityModel> {
-        const {uuid, token} = this;
+        const {uuid, secure} = this;
 
         return {
+            direction: SignalDirection.OUT,
             type: SignalType.EXPLORE,
             payload: {},
             emitter: [],
             catcher: [uuid],
-            secure: token,
-            direction: 'out'
+            secure
         } as any;
     }
 
