@@ -19,8 +19,8 @@ export class Base {
     public dispose() {
         const {socket, subject} = this;
 
-        const items = [socket, subject];
-        for (const item of items) item.destroy();
+        socket.destroy();
+        subject.unsubscribe();
     }
 
     // --- METHODS [STATIC] --------------------------------------------------------------------------------------------
