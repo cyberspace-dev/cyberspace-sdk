@@ -1,6 +1,6 @@
-import {ISignal}            from '../interfaces/signal/signal';
-import {SignalType}         from '../enums/signal/type';
-import {SignalDirection}    from '../enums/signal/direction';
+import {ISignal} from '../interfaces/signal/signal';
+import {SignalType} from '../enums/signal/type';
+import {SignalDirection} from '../enums/signal/direction';
 
 const pify = require('pify');
 
@@ -52,12 +52,9 @@ export class Utils {
     }
 
     public static convert(timestamp: number) {
-        const options: any = {year: 'numeric', month: '2-digit', day: '2-digit'};
+        const int = new Intl.DateTimeFormat('de-DE', {year: 'numeric', month: '2-digit', day: '2-digit', timeZone: 'Europe/Berlin'});
 
-        let date = new Date(timestamp).toLocaleDateString('en-GB', options);
-        while (date.indexOf('/') > -1) date = date.replace('/', '.');
-
-        return date;
+        return int.format(timestamp);
     }
 
     public static randomize(star: any, initial: boolean, cameraZ: number) {
