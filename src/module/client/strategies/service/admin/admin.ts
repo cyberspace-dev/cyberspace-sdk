@@ -1,6 +1,7 @@
 import {Subject}            from 'rxjs';
 
 import {Base}               from '../../../base/base';
+import {Utils}              from '../../../../utils/utils';
 import {IProfile}           from '../../../../../openlib';
 import {SignalType}         from '../../../../../openlib';
 import {SignalDirection}    from '../../../../../openlib';
@@ -22,7 +23,7 @@ export class Admin extends Base {
 
     // --- SECTION [METHODS] -------------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.GET_BY_ID)
+    @Utils.request(SignalType.GET_BY_ID)
     public async get(id: number): Promise<IProfile> {
         return {
             type: SignalType.GET_BY_ID,
@@ -33,7 +34,7 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.GET_LAST_ID)
+    @Utils.request(SignalType.GET_LAST_ID)
     public async last(): Promise<IProfile> {
         return {
             type: SignalType.GET_LAST_ID,
@@ -46,7 +47,7 @@ export class Admin extends Base {
 
     // --- METHODS [PRIVATE OPEN] --------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.INJECT)
+    @Utils.request(SignalType.INJECT)
     private async inject(fund: number, start: number, finish: number, version: string, companies: Array<any>) {
         const {token} = this;
 
@@ -60,7 +61,7 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.ACTION)
+    @Utils.request(SignalType.ACTION)
     private async action(type: string) {
         const {token} = this;
 
@@ -74,7 +75,7 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.FEED)
+    @Utils.request(SignalType.FEED)
     private async feed() {
         const {token} = this;
 
@@ -88,7 +89,7 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.WITHDRAWL)
+    @Utils.request(SignalType.WITHDRAWL)
     private async withdrawl() {
         const {token} = this;
 
@@ -102,7 +103,7 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.CONFIRM)
+    @Utils.request(SignalType.CONFIRM)
     private async confirm(uuid: string, confirmation: string) {
         const {token} = this;
 
@@ -116,7 +117,7 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.LEADS)
+    @Utils.request(SignalType.LEADS)
     private async leads() {
         const {token} = this;
 
@@ -130,7 +131,7 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.PROCESS)
+    @Utils.request(SignalType.PROCESS)
     private async process(type: string) {
         const {token} = this;
 
@@ -144,7 +145,7 @@ export class Admin extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.CREATE)
+    @Utils.request(SignalType.CREATE)
     private async create(url: string) {
         const {token} = this;
 
@@ -152,6 +153,20 @@ export class Admin extends Base {
             direction: SignalDirection.OUT,
             type: SignalType.CREATE,
             payload: {url},
+            emitter: [],
+            catcher: [],
+            secure: token
+        } as any;
+    }
+
+    @Utils.request(SignalType.UPLOAD)
+    private async upload(lead: string) {
+        const {token} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: SignalType.UPLOAD,
+            payload: {lead},
             emitter: [],
             catcher: [],
             secure: token

@@ -1,6 +1,7 @@
 import {Subject}            from 'rxjs';
 
 import {Base}               from '../../../base/base';
+import {Utils}              from '../../../../utils/utils';
 import {IBid}               from '../../../../../openlib';
 import {SignalDirection}    from '../../../../../openlib';
 import {SignalType}         from '../../../../../openlib';
@@ -19,7 +20,7 @@ export class Stock extends Base {
 
     // --- METHODS [PUBLIC] ----------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.BIDS)
+    @Utils.request(SignalType.BIDS)
     public async bids(): Promise<{records: Array<IBid>}> {
         return {
             direction: SignalDirection.OUT,
@@ -30,7 +31,7 @@ export class Stock extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.CHARGE)
+    @Utils.request(SignalType.CHARGE)
     public async charge(coins: number): Promise<{url: string}> {
         const {secure} = this;
 
@@ -44,7 +45,7 @@ export class Stock extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.BALANCE)
+    @Utils.request(SignalType.BALANCE)
     public async balance(): Promise<{balance: number}> {
         const {secure} = this;
 
@@ -58,7 +59,7 @@ export class Stock extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.HISTORY)
+    @Utils.request(SignalType.HISTORY)
     public async history(count: number, offset?: number): Promise<{records: Array<IBid>}> {
         const {secure} = this;
 
@@ -72,7 +73,7 @@ export class Stock extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.WITHDRAW_SUCCESS)
+    @Utils.request(SignalType.WITHDRAW_SUCCESS)
     public async withdraw(coins: number, address: string) {
         const {secure} = this;
 
@@ -86,7 +87,7 @@ export class Stock extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.DEPOSIT_INFO_SUCCESS)
+    @Utils.request(SignalType.DEPOSIT_INFO_SUCCESS)
     public async info(): Promise<any> {
         const {secure} = this;
 
@@ -100,7 +101,7 @@ export class Stock extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.EXCHANGE_SUCCESS)
+    @Utils.request(SignalType.EXCHANGE_SUCCESS)
     public async exchange(target: string, coins: number): Promise<{uuid: string}> {
         const {secure} = this;
 
@@ -114,7 +115,7 @@ export class Stock extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.EXCHANGE_CANCELED)
+    @Utils.request(SignalType.EXCHANGE_CANCELED)
     public async cancel(target: string) {
         const {secure} = this;
 
@@ -128,7 +129,7 @@ export class Stock extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.APPLY_SUCCESS)
+    @Utils.request(SignalType.APPLY_SUCCESS)
     public async apply(uuid: string) {
         const {secure} = this;
 
@@ -142,7 +143,7 @@ export class Stock extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.PROFIT)
+    @Utils.request(SignalType.PROFIT)
     public async profit() {
         const {secure} = this;
 

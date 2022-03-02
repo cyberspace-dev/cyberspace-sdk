@@ -94,7 +94,7 @@ export class Account extends Base {
 
     // --- SECTION [METHODS] -------------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.RECEIVE_SEARCH)
+    @Utils.request(SignalType.RECEIVE_SEARCH)
     public async search(uuidOrName: string): Promise<IProfile> {
         return {
             direction: SignalDirection.OUT,
@@ -105,7 +105,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.RECEIVE_RANKINGS)
+    @Utils.request(SignalType.RECEIVE_RANKINGS)
     public async rankings(count: number, offset: number): Promise<Array<IProfile>> {
         return {
             direction: SignalDirection.OUT,
@@ -116,7 +116,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.STARMAP)
+    @Utils.request(SignalType.STARMAP)
     public async starmap(quadrant: Quadrants): Promise<any> {
         return {
             direction: SignalDirection.OUT,
@@ -129,7 +129,7 @@ export class Account extends Base {
 
     // --- SECURED -----------------------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.RECEIVE_OBJECTS)
+    @Utils.request(SignalType.RECEIVE_OBJECTS)
     public async objects(count?: number, offset?: number): Promise<{objects: Array<IObject>, hasNext: boolean}> {
         const {secure} = this;
 
@@ -143,7 +143,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.UPDATE_PROFILE_SUCCESS)
+    @Utils.request(SignalType.UPDATE_PROFILE_SUCCESS)
     public async update(email: string, name: string, role: number, twitter: string, selected: number, password: string, newPassword?: string) {
         const {secure} = this;
 
@@ -157,7 +157,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.RECEIVE_PROFILE)
+    @Utils.request(SignalType.RECEIVE_PROFILE)
     public async profile(): Promise<IProfile> {
         const {secure} = this;
 
@@ -171,7 +171,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.ASSEMBLY_SUCCESS)
+    @Utils.request(SignalType.ASSEMBLY_SUCCESS)
     public async assemble() {
         const {secure} = this;
 
@@ -187,7 +187,7 @@ export class Account extends Base {
 
     // --- METHODS [PRIVATE OPEN] --------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.DETAILS)
+    @Utils.request(SignalType.DETAILS)
     private async details(uuid: string): Promise<any> {
         const {secure} = this;
 
@@ -201,7 +201,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.UPLOAD_SUCCESS)
+    @Utils.request(SignalType.UPLOAD_SUCCESS)
     private async upload(base64: string) {
         const {secure} = this;
 
@@ -215,7 +215,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.ONLINE)
+    @Utils.request(SignalType.ONLINE)
     private async online() {
         return {
             direction: SignalDirection.OUT,
@@ -226,7 +226,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.BONUS_SUCCESS)
+    @Utils.request(SignalType.BONUS_SUCCESS)
     private async bonus() {
         const {secure} = this;
 
@@ -242,7 +242,7 @@ export class Account extends Base {
 
     // --- METHODS [PRIVATE SECURED] -----------------------------------------------------------------------------------
 
-    @Base.request(SignalType.SIGNUP_SUCCESS)
+    @Utils.request(SignalType.SIGNUP_SUCCESS)
     private async signup(email: string, name: string, password: string, selected: number, token: string) {
         return {
             direction: SignalDirection.OUT,
@@ -253,7 +253,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.RESEND_SUCCESS)
+    @Utils.request(SignalType.RESEND_SUCCESS)
     private async resend(email: string, password: string, token: string) {
         return {
             direction: SignalDirection.OUT,
@@ -264,7 +264,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.ACTIVATION_SUCCESS)
+    @Utils.request(SignalType.ACTIVATION_SUCCESS)
     private async activate(email: string, code: string) {
         return {
             direction: SignalDirection.OUT,
@@ -275,7 +275,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.RECOVERY_TOKEN_SENT)
+    @Utils.request(SignalType.RECOVERY_TOKEN_SENT)
     private async recovery(email: string, token: string) {
         return {
             direction: SignalDirection.OUT,
@@ -286,7 +286,7 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request(SignalType.UNLOCK_SUCCESS)
+    @Utils.request(SignalType.UNLOCK_SUCCESS)
     private async unlock(email: string, password: string, code: string, token: string) {
         return {
             direction: SignalDirection.OUT,

@@ -16,5 +16,6 @@ export declare class Admin extends Base {
     private leads;
     private process;
     private create;
+    private upload;
     static connect(): Promise<Admin>;
 }

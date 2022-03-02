@@ -1,5 +1,5 @@
 import {NodeBase}           from '../../base/base';
-import {Base}               from '../../../../../base/base';
+import {Utils}              from '../../../../../../utils/utils';
 import {CargoType}          from '../../../../../../../openlib';
 import {SignalDirection}    from '../../../../../../../openlib';
 import {SignalType}         from '../../../../../../../openlib';
@@ -8,7 +8,7 @@ export class Planet extends NodeBase {
 
     // --- METHODS [PUBLIC] ----------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.MAKE_SUCCESS)
+    @Utils.request(SignalType.MAKE_SUCCESS)
     public async make(type: CargoType, level: number): Promise<string> {
         const {uuid, secure} = this;
 
@@ -22,7 +22,7 @@ export class Planet extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.OPEN_SUCCESS)
+    @Utils.request(SignalType.OPEN_SUCCESS)
     public async sell(uuid: string, price: number): Promise<string> {
         const {secure} = this;
 
@@ -36,7 +36,7 @@ export class Planet extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.OPEN_SUCCESS)
+    @Utils.request(SignalType.OPEN_SUCCESS)
     public async buy(expected: CargoType, price: number, count?: number): Promise<string> {
         const {secure} = this;
 
@@ -50,7 +50,7 @@ export class Planet extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.CLOSE_SUCCESS)
+    @Utils.request(SignalType.CLOSE_SUCCESS)
     public async close(uuid: string) {
         const {secure} = this;
 

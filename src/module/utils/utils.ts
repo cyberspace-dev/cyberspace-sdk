@@ -1,3 +1,5 @@
+import {SignalType} from '../../openlib';
+
 export class Utils {
 
     // --- MEMBERS [STATIC] --------------------------------------------------------------------------------------------
@@ -13,6 +15,33 @@ export class Utils {
             let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
+    }
+
+    public static request(expected: SignalType) {
+        return function (target: any, key: string | symbol, descriptor: PropertyDescriptor) {
+            const original = descriptor.value;
+
+            descriptor.value = async function( ... args: any[]) {
+                // --- CREATE CONTEXT ----------------------------------------------------------------------------------
+                const context = this;
+
+                // --- GENERATE SIGNAL AND SEND ------------------------------------------------------------------------
+                const {socket, subject} = context;
+
+                const request: any = await original.apply(this, args);
+                const response: any = await Utils.promisify(socket, subject, request);
+
+                // --- CHECK EXPECTED SIGNAL TYPE ----------------------------------------------------------------------
+                const {type, payload} = response;
+                if (type === expected) return payload;
+
+                // --- THROW AN ERROR ----------------------------------------------------------------------------------
+                const {reason} = payload;
+                throw new Error(reason || 'UNEXPECTED_ERROR');
+            };
+
+            return descriptor;
+        };
     }
 
     public static promisify(socket: any, subject: any, signal: any) {

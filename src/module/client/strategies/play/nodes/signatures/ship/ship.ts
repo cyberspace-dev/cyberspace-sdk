@@ -1,5 +1,4 @@
 import {NodeBase}           from '../../base/base';
-import {Base}               from '../../../../../base/base';
 import {Utils}              from '../../../../../../utils/utils';
 import {SignalType}         from '../../../../../../../openlib';
 import {SignalDirection}    from '../../../../../../../openlib';
@@ -36,7 +35,7 @@ export class Ship extends NodeBase {
         throw new Error(response.payload.reason);
     }
 
-    @Base.request(SignalType.SCAN_SUCCESS)
+    @Utils.request(SignalType.SCAN_SUCCESS)
     public async scan(uuid: string): Promise<IEntityModel> {
         const {secure} = this;
 
@@ -50,7 +49,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.EQUIP_SUCCESS)
+    @Utils.request(SignalType.EQUIP_SUCCESS)
     public async equip(slot: string, uuid: string) {
         const {secure} = this;
 
@@ -64,7 +63,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.UNEQUIP_SUCCESS)
+    @Utils.request(SignalType.UNEQUIP_SUCCESS)
     public async unequip(slot: string) {
         const {secure} = this;
 
@@ -80,7 +79,7 @@ export class Ship extends NodeBase {
 
     // --- SECTION [IN SPACE] ------------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.LANDING_SUCCESS)
+    @Utils.request(SignalType.LANDING_SUCCESS)
     public async landing(uuid: string) {
         const {secure} = this;
 
@@ -94,7 +93,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.MOVE_SUCCESS)
+    @Utils.request(SignalType.MOVE_SUCCESS)
     public async move(x: number, y: number) {
         const {secure} = this;
 
@@ -108,7 +107,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.GRAB_SUCCESS)
+    @Utils.request(SignalType.GRAB_SUCCESS)
     public async grab(uuid: string) {
         const {secure} = this;
 
@@ -122,7 +121,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.DROP_SUCCESS)
+    @Utils.request(SignalType.DROP_SUCCESS)
     public async drop(uuid: string) {
         const {secure} = this;
 
@@ -136,7 +135,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.WARP_SUCCESS)
+    @Utils.request(SignalType.WARP_SUCCESS)
     public async warp(uuid: string) {
         const {secure} = this;
 
@@ -150,7 +149,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.ATTACK_SUCCESS)
+    @Utils.request(SignalType.ATTACK_SUCCESS)
     public async attack(target: string, weapons: Array<number>): Promise<Array<{status: boolean, reason: string}>> {
         const {secure} = this;
 
@@ -170,7 +169,7 @@ export class Ship extends NodeBase {
 
     // --- SECTION [ON PLANET] -----------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.ESCAPE_SUCCESS)
+    @Utils.request(SignalType.ESCAPE_SUCCESS)
     public async escape() {
         const {uuid, secure} = this;
 
@@ -184,7 +183,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.FUEL_SUCCESS)
+    @Utils.request(SignalType.FUEL_SUCCESS)
     public async fuel() {
         const {uuid, secure} = this;
 
@@ -198,7 +197,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.REPAIR_SUCCESS)
+    @Utils.request(SignalType.REPAIR_SUCCESS)
     public async repair() {
         const {uuid, secure} = this;
 
@@ -212,7 +211,7 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request(SignalType.ACCEPT_SUCCESS)
+    @Utils.request(SignalType.ACCEPT_SUCCESS)
     public async accept(uuid: string, count?: number) {
         const {secure} = this;
 
@@ -228,7 +227,7 @@ export class Ship extends NodeBase {
 
     // --- SECTION [ONLY ON YOUR OWN PLANET] ---------------------------------------------------------------------------
 
-    @Base.request(SignalType.TRANSFER_SUCCESS)
+    @Utils.request(SignalType.TRANSFER_SUCCESS)
     public async transfer(uuid: string, type: string) {
         const {secure} = this;
 
@@ -244,7 +243,7 @@ export class Ship extends NodeBase {
 
     // --- SECTION [IN SPECIFIC PLACE] ---------------------------------------------------------------------------------
 
-    @Base.request(SignalType.APPLY_SUCCESS)
+    @Utils.request(SignalType.APPLY_SUCCESS)
     public async apply(...payload: any[]): Promise<any> {
         const {uuid, secure} = this;
 

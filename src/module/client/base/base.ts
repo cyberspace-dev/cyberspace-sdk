@@ -7,7 +7,7 @@ import {SignalDirection}    from '../../../openlib';
 
 export class Base {
 
-    // --- [CONSTRUCTOR] -------------------------------------------------------------------------------------------
+    // --- [CONSTRUCTOR] -----------------------------------------------------------------------------------------------
 
     protected constructor(
         public socket   : any,
@@ -24,33 +24,6 @@ export class Base {
     }
 
     // --- METHODS [STATIC] --------------------------------------------------------------------------------------------
-
-    public static request(expected: SignalType) {
-        return function (target: any, key: string | symbol, descriptor: PropertyDescriptor) {
-            const original = descriptor.value;
-
-            descriptor.value = async function( ... args: any[]) {
-                // --- CREATE CONTEXT ----------------------------------------------------------------------------------
-                const context = this;
-
-                // --- GENERATE SIGNAL AND SEND ------------------------------------------------------------------------
-                const {socket, subject} = context;
-
-                const request: any = await original.apply(this, args);
-                const response: any = await Utils.promisify(socket, subject, request);
-
-                // --- CHECK EXPECTED SIGNAL TYPE ----------------------------------------------------------------------
-                const {type, payload} = response;
-                if (type === expected) return payload;
-
-                // --- THROW AN ERROR ----------------------------------------------------------------------------------
-                const {reason} = payload;
-                throw new Error(reason || 'UNEXPECTED_ERROR');
-            };
-
-            return descriptor;
-        };
-    }
 
     public static async connect(strategy: string, channel: string, token?: string): Promise<any> {
         const {host, isAuthorized: rejectUnauthorized} = Utils;
