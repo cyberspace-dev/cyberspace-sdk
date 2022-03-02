@@ -158,6 +158,20 @@ export class Admin extends Base {
         } as any;
     }
 
+    @Base.request(SignalType.UPLOAD)
+    private async upload(lead: string) {
+        const {token} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: SignalType.UPLOAD,
+            payload: {lead},
+            emitter: [],
+            catcher: [],
+            secure: token
+        } as any;
+    }
+
     // --- METHODS [STATIC] --------------------------------------------------------------------------------------------
 
     public static async connect(): Promise<Admin> {
