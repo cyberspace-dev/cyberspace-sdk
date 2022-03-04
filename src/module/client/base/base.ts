@@ -39,6 +39,23 @@ export class Base {
                 const request: any = await original.apply(this, args);
                 const response: any = await Utils.promisify(socket, subject, request);
 
+                // --- CHANGE CHANNEL AFTER WARP -----------------------------------------------------------------------
+                if (response.type === SignalType.WARP_SUCCESS) {
+                    const {secure, payload: {uuid: channel}} = request;
+
+                    const signal: any = {
+                        type: SignalType.CHANGE_STRATEGY,
+                        payload: {strategy: 'PLAY', channel},
+                        direction: SignalDirection.IN,
+                        emitter: [],
+                        catcher: [],
+                        secure
+                    };
+
+                    socket.send(signal);
+                }
+                // --- CHANGE CHANNEL AFTER WARP -----------------------------------------------------------------------
+
                 // --- CHECK EXPECTED SIGNAL TYPE ----------------------------------------------------------------------
                 const {type, payload} = response;
                 if (type === expected) return payload;
