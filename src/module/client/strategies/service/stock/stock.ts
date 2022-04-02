@@ -115,13 +115,13 @@ export class Stock extends Base {
     }
 
     @Base.request(SignalType.EXCHANGE_CANCELED)
-    public async cancel(target: string) {
+    public async cancel(uuid: string) {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
             type: SignalType.EXCHANGE_CANCEL,
-            payload: {target},
+            payload: {uuid},
             emitter: [],
             catcher: [],
             secure

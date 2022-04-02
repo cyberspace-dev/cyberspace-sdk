@@ -23,7 +23,7 @@ export declare class Stock extends Base {
     exchange(uuid: string, coins: number): Promise<{
         uuid: string;
     }>;
-    cancel(target: string): Promise<any>;
+    cancel(uuid: string): Promise<any>;
     apply(uuid: string): Promise<any>;
     profit(): Promise<any>;
     static connect(token?: string): Promise<Stock>;
