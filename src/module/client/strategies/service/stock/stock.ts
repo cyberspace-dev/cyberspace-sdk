@@ -101,13 +101,13 @@ export class Stock extends Base {
     }
 
     @Base.request(SignalType.EXCHANGE_SUCCESS)
-    public async exchange(target: string, coins: number): Promise<{uuid: string}> {
+    public async exchange(uuid: string, coins: number): Promise<{uuid: string}> {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
             type: SignalType.EXCHANGE,
-            payload: {target, coins},
+            payload: {uuid, coins},
             emitter: [],
             catcher: [],
             secure
