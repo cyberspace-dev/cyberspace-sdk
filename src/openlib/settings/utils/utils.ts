@@ -69,15 +69,15 @@ export class Utils {
 
     // -----------------------------------------------------------------------------------------------------------------
 
-    public static async jwt(jwt: any, payload: any, isPermanent?: boolean): Promise<string> {
-        return jwt.sign(payload, process.env.SECRET, isPermanent ? null : { expiresIn: "2 days" });
+    public static async jwt(jwt: any, payload: any, isPermanent?: boolean, secret?: string): Promise<string> {
+        return jwt.sign(payload, secret || process.env.SECRET, isPermanent ? null : { expiresIn: "2 days" });
     }
 
-    public static async verify(jwt: any, token: string) {
+    public static async verify(jwt: any, token: string, secret?: string) {
         const {env: {SECRET}} = process;
         const verify = pify(jwt.verify);
 
-        return verify(token, SECRET);
+        return verify(token, secret || SECRET);
     }
 
     public static async save(instance: any) {

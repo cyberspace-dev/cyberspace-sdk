@@ -18,7 +18,7 @@ export declare class Stock extends Base {
     history(count: number, offset?: number): Promise<{
         records: Array<IBid>;
     }>;
-    withdraw(coins: number, address: string): Promise<any>;
+    withdraw(coins: number): Promise<any>;
     info(): Promise<any>;
     exchange(uuid: string, coins: number): Promise<{
         uuid: string;

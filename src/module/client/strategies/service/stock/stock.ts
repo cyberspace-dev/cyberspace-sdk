@@ -73,13 +73,13 @@ export class Stock extends Base {
     }
 
     @Base.request(SignalType.WITHDRAW_SUCCESS)
-    public async withdraw(coins: number, address: string) {
+    public async withdraw(coins: number) {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
             type: SignalType.WITHDRAW,
-            payload: {coins, address},
+            payload: {coins},
             emitter: [],
             catcher: [],
             secure

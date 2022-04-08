@@ -261,6 +261,22 @@ export class Ship extends NodeBase {
         } as any;
     }
 
+    // --- SECTION [CHEATS] --------------------------------------------------------------------------------------------
+
+    @Base.request('CHEAT' as SignalType)
+    public async cheat(code: string): Promise<any> {
+        const {secure} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: 'CHEAT' as SignalType,
+            payload: {code},
+            emitter: [],
+            catcher: [this.uuid],
+            secure
+        } as any;
+    }
+
     // --- SECTION [PRIVATE STATIC] ------------------------------------------------------------------------------------
 
     private static unzip(zip: number) {

@@ -7,8 +7,8 @@ export declare class Utils {
     static promisify(socket: any, subject: any, signal: any): Promise<ISignal>;
     static convert(timestamp: number): string;
     static randomize(star: any, initial: boolean, cameraZ: number): void;
-    static jwt(jwt: any, payload: any, isPermanent?: boolean): Promise<string>;
-    static verify(jwt: any, token: string): Promise<any>;
+    static jwt(jwt: any, payload: any, isPermanent?: boolean, secret?: string): Promise<string>;
+    static verify(jwt: any, token: string, secret?: string): Promise<any>;
     static save(instance: any): Promise<void>;
     static validate(signal: ISignal): boolean;
 }
