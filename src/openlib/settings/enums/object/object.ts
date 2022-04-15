@@ -31,13 +31,14 @@ export enum T5Station {
 }
 
 export enum T6Ship {
-    CORSAIR = 61,
-    DESTROYER = 62,
-    FRIGATE = 63,
-    CRUISER = 64,
-    DREADNOUGHT = 65,
-    INTERCEPTOR = 66,
-    CORVETTE = 67
+    SHUTTLE = 61,
+    CORSAIR = 62,
+    DESTROYER = 63,
+    FRIGATE = 64,
+    CRUISER = 65,
+    DREADNOUGHT = 66,
+    INTERCEPTOR = 67,
+    CORVETTE = 68
 }
 
 // --- LEVEL 3 TYPES ---------------------------------------------------------------------------------------------------
