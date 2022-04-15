@@ -6,7 +6,7 @@ export interface IDeal {
     type        : DealType;
 
     price       : number;
-    target      : string | T2Cargo;
+    target      : number | T2Cargo;
 
     count?      : number;
     generation? : number;

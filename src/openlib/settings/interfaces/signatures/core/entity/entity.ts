@@ -8,12 +8,14 @@ import {IScientificStationStructure}    from './signatures/nodes/dockable/signat
 export interface IEntityModel {
 
     uuid    : string,
-    type    : number,
     owner   : string,
-    body    : IShipStructure | IPlanetStructure | IAsteroidStructure |
-        ICargoStructure | IBusinessStationStructure | IScientificStationStructure,
-    nodes?  : Array<IEntityModel>,
+    type    : number,
+    view    : number,
+
     parent? : {uuid: string, type: string},
-    system  : string;
+    body    : IShipStructure | IPlanetStructure | IAsteroidStructure |
+        ICargoStructure | IBusinessStationStructure | IScientificStationStructure;
+
+    nodes?  : Array<IEntityModel>;
 
 }
