@@ -1,10 +1,4 @@
-export {SignalType}     from './openlib/settings/enums/signal/type';
-export {CommandType}    from './openlib/settings/enums/signatures/sdk/command/type';
-export {Events}         from './openlib/settings/enums/signatures/web/events/events';
-export {Quadrants}      from './openlib/settings/enums/signatures/web/quadrants/quadrants';
-export {IObject}        from './openlib/settings/interfaces/signatures/auth/object/object';
-export {IProfile}       from './openlib/settings/interfaces/signatures/auth/profile/profile';
-export {IEntityModel}   from './openlib/settings/interfaces/signatures/core/entity/entity';
+export *                from './openlib/index';
 
 export {Play}           from './module/client/strategies/play/play';
 export {Ship}           from './module/client/strategies/play/nodes/signatures/ship/ship';
