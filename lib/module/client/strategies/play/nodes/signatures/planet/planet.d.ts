@@ -1,8 +1,8 @@
 import { NodeBase } from '../../base/base';
-import { CargoType } from '../../../../../../../openlib';
+import { T22Equipment } from '../../../../../../../openlib';
 export declare class Planet extends NodeBase {
-    make(type: CargoType, level: number): Promise<string>;
+    make(type: T22Equipment, level: number): Promise<string>;
     sell(uuid: string, price: number): Promise<string>;
-    buy(expected: CargoType, price: number, count?: number): Promise<string>;
+    buy(expected: T22Equipment, price: number, count?: number): Promise<string>;
     close(uuid: string): Promise<any>;
 }

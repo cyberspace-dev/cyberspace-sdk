@@ -1,7 +1,6 @@
 import { ISignal } from '../interfaces/signal/signal';
 export declare class Utils {
     static uuidv4(): string;
-    static marker(isMaster: boolean): string;
     static random(min: number, max: number): number;
     static diff(start: number, time: number): number;
     static promisify(socket: any, subject: any, signal: any): Promise<ISignal>;

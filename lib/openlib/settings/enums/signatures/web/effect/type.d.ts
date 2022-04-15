@@ -1,9 +1,13 @@
 export declare enum EffectType {
-    DESTROY = "DESTROY",
-    WARPIN = "WARPIN",
-    WARPOUT = "WARPOUT",
-    LANDING = "LANDING",
-    ESCAPE = "ESCAPE",
-    DAMAGE = "DAMAGE",
-    ATTACK = "ATTACK"
+    DESTROY = 1,
+    WARPIN = 2,
+    WARPOUT = 3,
+    LANDING = 4,
+    ESCAPE = 5,
+    DAMAGE = 6,
+    ATTACK = 7,
+    STANDBY = 8,
+    START = 9,
+    MOVE = 10,
+    STOP = 11
 }

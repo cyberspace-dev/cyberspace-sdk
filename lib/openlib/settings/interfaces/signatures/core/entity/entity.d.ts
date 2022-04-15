@@ -6,7 +6,7 @@ import { IBusinessStationStructure } from './signatures/nodes/dockable/signature
 import { IScientificStationStructure } from './signatures/nodes/dockable/signatures/station/signatures/scientific';
 export interface IEntityModel {
     uuid: string;
-    type: string;
+    type: number;
     owner: string;
     body: IShipStructure | IPlanetStructure | IAsteroidStructure | ICargoStructure | IBusinessStationStructure | IScientificStationStructure;
     nodes?: Array<IEntityModel>;
@@ -14,4 +14,5 @@ export interface IEntityModel {
         uuid: string;
         type: string;
     };
+    system: string;
 }

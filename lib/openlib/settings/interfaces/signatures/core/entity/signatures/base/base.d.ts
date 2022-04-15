@@ -4,6 +4,5 @@ export interface IBaseStructure {
         y: number;
         a: number;
     };
-    view: number;
     [key: string]: any;
 }

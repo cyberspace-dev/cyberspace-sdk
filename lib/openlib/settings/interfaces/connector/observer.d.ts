@@ -1,4 +1,4 @@
 export interface IObserver {
-    observer: any;
     point: any;
+    observer: any;
 }

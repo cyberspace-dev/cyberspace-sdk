@@ -6,8 +6,6 @@ export interface ISignal {
     payload: any;
     emitter: Array<string>;
     catcher: Array<string>;
+    key: string;
     secure?: string;
-    secret?: string;
-    key?: string;
-    force?: boolean;
 }

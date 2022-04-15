@@ -1,7 +1,6 @@
 import {Subject}            from 'rxjs';
 
 import {Base}               from '../../../base/base';
-import {IBid}               from '../../../../../openlib';
 import {SignalDirection}    from '../../../../../openlib';
 import {SignalType}         from '../../../../../openlib';
 
@@ -20,7 +19,7 @@ export class Stock extends Base {
     // --- METHODS [PUBLIC] ----------------------------------------------------------------------------------------
 
     @Base.request(SignalType.BIDS)
-    public async bids(): Promise<{records: Array<IBid>}> {
+    public async bids(): Promise<{records: Array<any>}> {
         return {
             direction: SignalDirection.OUT,
             type: SignalType.BIDS,
@@ -59,7 +58,7 @@ export class Stock extends Base {
     }
 
     @Base.request(SignalType.HISTORY)
-    public async history(count: number, offset?: number): Promise<{records: Array<IBid>}> {
+    public async history(count: number, offset?: number): Promise<{records: Array<any>}> {
         const {secure} = this;
 
         return {

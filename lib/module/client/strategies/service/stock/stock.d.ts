@@ -1,13 +1,12 @@
 import { Subject } from 'rxjs';
 import { Base } from '../../../base/base';
-import { IBid } from '../../../../../openlib';
 export declare class Stock extends Base {
     socket: any;
     subject: Subject<any>;
     secure: string;
     constructor(socket: any, subject: Subject<any>, secure: string);
     bids(): Promise<{
-        records: Array<IBid>;
+        records: Array<any>;
     }>;
     charge(coins: number): Promise<{
         url: string;
@@ -16,7 +15,7 @@ export declare class Stock extends Base {
         balance: number;
     }>;
     history(count: number, offset?: number): Promise<{
-        records: Array<IBid>;
+        records: Array<any>;
     }>;
     withdraw(coins: number): Promise<any>;
     info(): Promise<any>;
