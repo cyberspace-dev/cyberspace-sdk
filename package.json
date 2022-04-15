@@ -17,7 +17,7 @@
   "scripts": {
     "start": "node lib/index.js",
     "build": "tsc",
-    "update": "rm -rf ./src/openlib && cp -r ./../../3-shared/src/openlib ./src/openlib",
+    "update": "rm -rf ./src/openlib && cp -r ./../../../3-cluster/3-shared/src/openlib ./src/openlib",
     "release": "rm -rf src && npm publish --access public && git reset --hard HEAD",
     "postversion": "git push --tags && git push"
   },

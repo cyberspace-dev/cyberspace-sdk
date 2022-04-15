@@ -1,4 +1,6 @@
 export interface IRule {
-    canExecute(): boolean;
-    execute(): void;
+
+    canExecute()    : Promise<boolean>;
+    execute()       : Promise<void>;
+
 }

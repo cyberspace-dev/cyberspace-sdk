@@ -1,14 +1,13 @@
+import {T2Cargo}    from '../../../../../../enums/object/object';
 import {DealType}   from '../../../../../../enums/signatures/core/deal/type';
-import {CargoType}  from '../../../../../../enums/signatures/core/cargo/type';
 
 export interface IDeal {
-
     uuid        : string;
     type        : DealType;
+
     price       : number;
+    target      : string | T2Cargo;
 
-    expected?   : CargoType;
-    target?     : string;
     count?      : number;
-
+    generation? : number;
 }

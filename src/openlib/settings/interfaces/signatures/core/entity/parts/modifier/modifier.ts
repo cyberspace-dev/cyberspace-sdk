@@ -1,4 +1,4 @@
 export interface IModifier {
-    name    : string;
+    name    : number;
     value   : number
 }

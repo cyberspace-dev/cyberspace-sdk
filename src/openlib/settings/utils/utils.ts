@@ -1,6 +1,6 @@
-import {ISignal} from '../interfaces/signal/signal';
-import {SignalType} from '../enums/signal/type';
-import {SignalDirection} from '../enums/signal/direction';
+import {ISignal}            from '../interfaces/signal/signal';
+import {SignalType}         from '../enums/signal/type';
+import {SignalDirection}    from '../enums/signal/direction';
 
 const pify = require('pify');
 
@@ -9,14 +9,12 @@ export class Utils {
     // --- SECTION [COMMON] --------------------------------------------------------------------------------------------
 
     public static uuidv4(): string {
-        return 'xxxxxxxxxx'.replace(/[xy]/g, (c) => {
+        const uuid = 'xxxxxxxxyx'.replace(/[xy]/g, (c) => {
             let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
-    }
 
-    public static marker(isMaster: boolean): string {
-        return isMaster ? 'MASTER' : 'WORKER';
+        return uuid.toUpperCase();
     }
 
     public static random(min: number, max: number): number {

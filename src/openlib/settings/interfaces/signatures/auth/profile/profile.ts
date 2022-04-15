@@ -4,16 +4,16 @@ export interface IProfile {
     email       : string;
     name        : string,
     avatar      : string;
-    isActive    : boolean;
     assembly    : number;
+    isActive    : boolean;
 
     role?       : number;
     place?      : number;
     balance?    : number;
     score?      : number;
+    bonus?      : number;
     country?    : string;
     company?    : string;
     twitter?    : string;
-    bonus?      : number;
 
 }

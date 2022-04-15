@@ -1,44 +1,49 @@
 export enum ModifierType {
 
-    /* --- HULL1 ---------------------------------------------------------------------------------------------------- */
+    /* --- HULL ----------------------------------------------------------------------------------------------------- */
 
-    TOTAL_HP        = 'total_hp',
-    CURRENT_HP      = 'current_hp',
-    DEFENSE         = 'defense',
+    HULL_STRUCTURE_TOTAL = 0,
+    HULL_STRUCTURE_CURRENT = 1,
+    HULL_DEFENSE = 2,
 
     /* --- ENGINE --------------------------------------------------------------------------------------------------- */
 
-    SPEED           = 'speed',
-    WARP            = 'warp',
+    ENGINE_SPEED = 3,
+    ENGINE_WARP = 4,
 
     /* --- SCANNER -------------------------------------------------------------------------------------------------- */
 
-    POWER           = 'power',
+    SCANNER_POWER = 5,
 
     /* --- DROID ---------------------------------------------------------------------------------------------------- */
 
-    RECOVERY        = 'recovery',
+    DROID_POWER_RECOVERY = 6,
+    DROID_STRUCTURE_RECOVERY = 7,
 
     /* --- PROTECTOR ------------------------------------------------------------------------------------------------ */
 
-    REDUCE          = 'reduce',
+    PROTECTOR_POWER_TOTAL = 8,
+    PROTECTOR_POWER_CURRENT = 9,
+    PROTECTOR_REDUCE = 10,
 
     /* --- GRIPPER -------------------------------------------------------------------------------------------------- */
 
-    TRACTION        = 'traction',
+    GRIPPER_TRACTION = 11,
 
     /* --- RADAR ---------------------------------------------------------------------------------------------------- */
 
-    RADIUS          = 'radius',
+    RADAR_RANGE = 12,
 
     /* --- TANK ----------------------------------------------------------------------------------------------------- */
 
-    TOTAL_FUEL      = 'total_fuel',
-    CURRENT_FUEL    = 'current_fuel',
+    TANK_FUEL_TOTAL = 13,
+    TANK_FUEL_CURRENT = 14,
 
     /* --- WEAPON --------------------------------------------------------------------------------------------------- */
 
-    RANGE           = 'range',
-    DAMAGE          = 'damage'
+    WEAPON_TYPE = 15,
+    WEAPON_RANGE = 16,
+    WEAPON_DAMAGE = 17,
+    WEAPON_DELAY = 18
 
 }
