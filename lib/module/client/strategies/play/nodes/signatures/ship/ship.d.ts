@@ -21,6 +21,5 @@ export declare class Ship extends NodeBase {
     transfer(uuid: string, type: string): Promise<any>;
     apply(...payload: any[]): Promise<any>;
     cheat(code: string): Promise<any>;
-    private static unzip;
     private static transform;
 }
