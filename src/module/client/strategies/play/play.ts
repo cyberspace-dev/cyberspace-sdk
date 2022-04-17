@@ -35,12 +35,10 @@ export class Play extends Base {
 
         const response: any = await Utils.promisify(socket, subject, signal);
         if (response.type === SignalType.EXPLORE_SUCCESS) {
-            switch(response.payload.type) {
-                case 'Ship':
-                    return new Ship(socket, subject, uuid, secure);
-                case 'Planet':
-                    return new Planet(socket, subject, uuid, secure);
-            }
+            const {payload: {type}} = response;
+
+            if (`${type}`.startsWith('6')) return new Ship(socket, subject, uuid, secure);
+            if (`${type}`.startsWith('4')) return new Planet(socket, subject, uuid, secure);
 
             response.payload.reason = 'UNEXPECTED_TYPE';
         }

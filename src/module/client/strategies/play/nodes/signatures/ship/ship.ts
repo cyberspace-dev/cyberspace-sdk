@@ -24,11 +24,10 @@ export class Ship extends NodeBase {
         const response: any = await Utils.promisify(socket, subject, signal);
         if (response.type === SignalType.RADAR_SUCCESS) {
             const {payload} = response;
-            const [zip, uuid, owner, x, y, a, view, nodes] = payload;
+            const [uuid, owner, type, view, x, y, a, nodes] = payload;
 
             return {
-                type: Ship.unzip(zip),
-                uuid, owner, body: {vector: {x, y, a}, view},
+                uuid, owner, type, view, body: {vector: {x, y, a}},
                 nodes: nodes.map((node: any) => Ship.transform(node))
             } as any;
         }
@@ -279,34 +278,14 @@ export class Ship extends NodeBase {
 
     // --- SECTION [PRIVATE STATIC] ------------------------------------------------------------------------------------
 
-    private static unzip(zip: number) {
-        switch (zip) {
-            case 1:return 'System';
-            case 2:return 'Planet';
-            case 3:return 'ScientificStation';
-            case 4:return 'BusinessStation';
-            case 5:return 'Ship';
-            case 6:return 'Asteroid';
-            case 7:return 'Cargo';
-        }
-    }
-
     private static transform(body: any) {
-        const [zip, uuid, owner, x, y, a, view] = body;
+        const [uuid, owner, type, view, x, y, a] = body;
 
-        const item = {
-            type: Ship.unzip(zip),
-            uuid, owner,
-            body: {vector:{x, y, a}, view},
+        return {
+            uuid, owner, type, view,
+            body: {vector:{x, y, a}},
             nodes: []
         } as any;
-
-        if (item.type === 'Cargo') {
-            item.owner = '';
-            item.body.type = owner;
-        }
-
-        return item;
     }
 
 }
