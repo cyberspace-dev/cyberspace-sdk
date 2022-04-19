@@ -1,3 +1,3 @@
-import {IDockableStructure} from '../../dockable';
+import {IBDockable} from '../../dockable';
 
-export interface IStationStructure extends IDockableStructure {}
+export interface IBStation extends IBDockable {}

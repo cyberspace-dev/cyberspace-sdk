@@ -1,7 +1,7 @@
-import { IBillableStructure } from '../../base/billable';
+import { IBBillable } from '../../base/3-billable';
 import { Slot } from '../../../parts/slot/slot';
 import { ISlot } from '../../../parts/slot/slot';
-export interface IShipStructure extends IBillableStructure {
+export interface IBShip extends IBBillable {
     grade: {
         level: number;
         required: number;
@@ -26,5 +26,5 @@ export interface IShipStructure extends IBillableStructure {
         [Slot.ARTIFACT3]: ISlot;
         [Slot.ARTIFACT4]: ISlot;
     };
-    target: any;
+    target?: any;
 }

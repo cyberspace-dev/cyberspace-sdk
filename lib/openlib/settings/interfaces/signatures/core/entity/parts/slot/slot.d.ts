@@ -1,7 +1,6 @@
-import { T22Equipment } from '../../../../../../enums/object/object';
 export interface ISlot {
     uuid: string;
-    type: T22Equipment;
+    type: number;
     max: number;
     blocked: boolean;
 }

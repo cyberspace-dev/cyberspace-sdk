@@ -1,6 +1,6 @@
-import {IDockableStructure} from '../../dockable';
+import {IBDockable} from '../../dockable';
 
-export interface IPlanetStructure extends IDockableStructure {
+export interface IBPlanet extends IBDockable {
 
     radius      : number;
     population  : number;

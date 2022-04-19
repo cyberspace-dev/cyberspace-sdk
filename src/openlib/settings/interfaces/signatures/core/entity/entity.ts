@@ -1,9 +1,9 @@
-import {IShipStructure}                 from './signatures/nodes/ship/ship';
-import {ICargoStructure}                from './signatures/nodes/cargo/cargo';
-import {IAsteroidStructure}             from './signatures/nodes/asteroid/asteroid';
-import {IPlanetStructure}               from './signatures/nodes/dockable/signatures/planet/planet';
-import {IBusinessStationStructure}      from './signatures/nodes/dockable/signatures/station/signatures/business';
-import {IScientificStationStructure}    from './signatures/nodes/dockable/signatures/station/signatures/scientific';
+import {IBShip}                 from "./signatures/nodes/ship/ship";
+import {IBCargo}                from "./signatures/nodes/cargo/cargo";
+import {IBAsteroid}             from "./signatures/nodes/asteroid/asteroid";
+import {IBPlanet}               from "./signatures/nodes/dockable/signatures/planet/planet";
+import {IBStationBusiness}      from "./signatures/nodes/dockable/signatures/station/signatures/business";
+import {IBStationScientific}    from "./signatures/nodes/dockable/signatures/station/signatures/scientific";
 
 export interface IEntityModel {
 
@@ -13,8 +13,7 @@ export interface IEntityModel {
     view    : number,
 
     parent? : {uuid: string, type: string},
-    body    : IShipStructure | IPlanetStructure | IAsteroidStructure |
-        ICargoStructure | IBusinessStationStructure | IScientificStationStructure;
+    body    : IBShip | IBPlanet | IBAsteroid | IBCargo | IBStationBusiness | IBStationScientific;
 
     nodes?  : Array<IEntityModel>;
 

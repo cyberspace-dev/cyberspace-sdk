@@ -1,3 +1,3 @@
-import { IStationStructure } from '../station';
-export interface IBusinessStationStructure extends IStationStructure {
+import { IBStation } from '../station';
+export interface IBStationBusiness extends IBStation {
 }

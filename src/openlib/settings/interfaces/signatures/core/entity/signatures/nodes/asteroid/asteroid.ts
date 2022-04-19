@@ -1,3 +1,3 @@
-import {IBaseStructure} from '../../base/base';
+import {IBBase} from '../../base/2-base';
 
-export interface IAsteroidStructure extends IBaseStructure {}
+export interface IBAsteroid extends IBBase {}

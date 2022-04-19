@@ -4,7 +4,7 @@ export interface IDeal {
     uuid: string;
     type: DealType;
     price: number;
-    target: number | T2Cargo;
+    target: string | T2Cargo;
     count?: number;
     generation?: number;
 }

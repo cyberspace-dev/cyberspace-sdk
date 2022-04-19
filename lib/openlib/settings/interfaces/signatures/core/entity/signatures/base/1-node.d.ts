@@ -1,9 +1,7 @@
-export interface IBaseStructure {
+export interface IBNode {
     vector: {
         x: number;
         y: number;
         a: number;
     };
-    [key: string]: any;
-    effects: any;
 }

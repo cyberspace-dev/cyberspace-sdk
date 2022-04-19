@@ -2,48 +2,47 @@ export enum ModifierType {
 
     /* --- HULL ----------------------------------------------------------------------------------------------------- */
 
-    HULL_STRUCTURE_TOTAL = 0,
-    HULL_STRUCTURE_CURRENT = 1,
-    HULL_DEFENSE = 2,
+    HULL_STRUCTURE_TOTAL = 'HULL_STRUCTURE_TOTAL',
+    HULL_STRUCTURE_CURRENT = 'HULL_STRUCTURE_CURRENT',
+    HULL_DEFENSE = 'HULL_DEFENSE',
 
     /* --- ENGINE --------------------------------------------------------------------------------------------------- */
 
-    ENGINE_SPEED = 3,
-    ENGINE_WARP = 4,
+    ENGINE_SPEED = 'ENGINE_SPEED',
+    ENGINE_WARP = 'ENGINE_WARP',
 
     /* --- SCANNER -------------------------------------------------------------------------------------------------- */
 
-    SCANNER_POWER = 5,
+    SCANNER_POWER = 'SCANNER_POWER',
 
     /* --- DROID ---------------------------------------------------------------------------------------------------- */
 
-    DROID_POWER_RECOVERY = 6,
-    DROID_STRUCTURE_RECOVERY = 7,
+    DROID_POWER_RECOVERY = 'DROID_POWER_RECOVERY',
+    DROID_STRUCTURE_RECOVERY = 'DROID_STRUCTURE_RECOVERY',
 
     /* --- PROTECTOR ------------------------------------------------------------------------------------------------ */
 
-    PROTECTOR_POWER_TOTAL = 8,
-    PROTECTOR_POWER_CURRENT = 9,
-    PROTECTOR_REDUCE = 10,
+    PROTECTOR_POWER_TOTAL = 'PROTECTOR_POWER_TOTAL',
+    PROTECTOR_POWER_CURRENT = 'PROTECTOR_POWER_CURRENT',
+    PROTECTOR_REDUCE = 'PROTECTOR_REDUCE',
 
     /* --- GRIPPER -------------------------------------------------------------------------------------------------- */
 
-    GRIPPER_TRACTION = 11,
+    GRIPPER_TRACTION = 'GRIPPER_TRACTION',
 
     /* --- RADAR ---------------------------------------------------------------------------------------------------- */
 
-    RADAR_RANGE = 12,
+    RADAR_RANGE = 'RADAR_RANGE',
 
     /* --- TANK ----------------------------------------------------------------------------------------------------- */
 
-    TANK_FUEL_TOTAL = 13,
-    TANK_FUEL_CURRENT = 14,
+    TANK_FUEL_TOTAL = 'TANK_FUEL_TOTAL',
+    TANK_FUEL_CURRENT = 'TANK_FUEL_CURRENT',
 
     /* --- WEAPON --------------------------------------------------------------------------------------------------- */
 
-    WEAPON_TYPE = 15,
-    WEAPON_RANGE = 16,
-    WEAPON_DAMAGE = 17,
-    WEAPON_DELAY = 18
+    WEAPON_RANGE = 'WEAPON_RANGE',
+    WEAPON_DAMAGE = 'WEAPON_DAMAGE',
+    WEAPON_DELAY = 'WEAPON_DELAY'
 
 }
