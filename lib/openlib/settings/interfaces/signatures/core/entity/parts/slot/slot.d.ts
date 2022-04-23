@@ -2,7 +2,6 @@ export interface ISlot {
     uuid: string;
     type: number;
     max: number;
-    blocked: boolean;
 }
 export declare enum Slot {
     HULL = "HULL",

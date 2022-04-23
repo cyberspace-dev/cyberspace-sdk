@@ -4,11 +4,22 @@ import {ISlot}      from '../../../parts/slot/slot';
 
 export interface IBShip extends IBBillable {
 
-    grade: {
-        level: number;
+    shield: number;
 
-        required: number;
-        experience: number;
+    grade: {
+        level               : number;
+        exp_current         : number;
+        exp_required        : number;
+        _v                  : number;
+    }
+
+    skills: {
+        points: Array<any>,
+        abilities: {
+            [key: string]   : number;
+            _v              : number;
+        }
+        _v                  : number;
     }
 
     slots: {
@@ -29,8 +40,10 @@ export interface IBShip extends IBBillable {
         [Slot.ARTIFACT2]    : ISlot;
         [Slot.ARTIFACT3]    : ISlot;
         [Slot.ARTIFACT4]    : ISlot;
+        _v                  : number;
     }
 
-    target?: any;
+    target?     : any;
+    ensurance?  : string;
 
 }

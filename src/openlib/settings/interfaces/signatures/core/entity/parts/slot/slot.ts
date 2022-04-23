@@ -3,7 +3,6 @@ export interface ISlot {
     type    : number;
 
     max     : number;
-    blocked : boolean;
 }
 
 export enum Slot {

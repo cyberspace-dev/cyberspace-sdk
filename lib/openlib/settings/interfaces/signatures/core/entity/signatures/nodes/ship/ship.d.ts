@@ -2,10 +2,20 @@ import { IBBillable } from '../../base/3-billable';
 import { Slot } from '../../../parts/slot/slot';
 import { ISlot } from '../../../parts/slot/slot';
 export interface IBShip extends IBBillable {
+    shield: number;
     grade: {
         level: number;
-        required: number;
-        experience: number;
+        exp_current: number;
+        exp_required: number;
+        _v: number;
+    };
+    skills: {
+        points: Array<any>;
+        abilities: {
+            [key: string]: number;
+            _v: number;
+        };
+        _v: number;
     };
     slots: {
         [Slot.HULL]: ISlot;
@@ -25,6 +35,8 @@ export interface IBShip extends IBBillable {
         [Slot.ARTIFACT2]: ISlot;
         [Slot.ARTIFACT3]: ISlot;
         [Slot.ARTIFACT4]: ISlot;
+        _v: number;
     };
     target?: any;
+    ensurance?: string;
 }

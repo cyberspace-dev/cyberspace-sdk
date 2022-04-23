@@ -15,9 +15,9 @@ export enum TObject {
 // --- LEVEL 2 TYPES ---------------------------------------------------------------------------------------------------
 
 export enum T2Cargo {
-    LOOT = 21,
-    MINERAL = 22,
-    EQUIPMENT = 23
+    MINERAL = 21,
+    EQUIPMENT = 22,
+    LOOT = 23
 }
 
 export enum T5Station {
@@ -32,13 +32,13 @@ export enum T5Station {
 
 export enum T6Ship {
     SHUTTLE = 61,
-    CORSAIR = 62,
-    DESTROYER = 63,
-    FRIGATE = 64,
-    CRUISER = 65,
-    DREADNOUGHT = 66,
-    INTERCEPTOR = 67,
-    CORVETTE = 68
+    DESTROYER = 62,
+    FRIGATE = 63,
+    CRUISER = 64,
+    DREADNOUGHT = 65,
+    INTERCEPTOR = 66,
+    CORVETTE = 67,
+    CORSAIR = 68
 }
 
 // --- LEVEL 3 TYPES ---------------------------------------------------------------------------------------------------

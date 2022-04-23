@@ -10,9 +10,9 @@ export declare enum TObject {
     DROID = 9
 }
 export declare enum T2Cargo {
-    LOOT = 21,
-    MINERAL = 22,
-    EQUIPMENT = 23
+    MINERAL = 21,
+    EQUIPMENT = 22,
+    LOOT = 23
 }
 export declare enum T5Station {
     PILOTS = 51,
@@ -25,13 +25,13 @@ export declare enum T5Station {
 }
 export declare enum T6Ship {
     SHUTTLE = 61,
-    CORSAIR = 62,
-    DESTROYER = 63,
-    FRIGATE = 64,
-    CRUISER = 65,
-    DREADNOUGHT = 66,
-    INTERCEPTOR = 67,
-    CORVETTE = 68
+    DESTROYER = 62,
+    FRIGATE = 63,
+    CRUISER = 64,
+    DREADNOUGHT = 65,
+    INTERCEPTOR = 66,
+    CORVETTE = 67,
+    CORSAIR = 68
 }
 export declare enum T22Equipment {
     HULL = 2201,
