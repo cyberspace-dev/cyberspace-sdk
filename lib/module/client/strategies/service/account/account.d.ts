@@ -17,6 +17,7 @@ export declare class Account extends Base {
     search(uuidOrName: string): Promise<IProfile>;
     rankings(count: number, offset: number): Promise<Array<IProfile>>;
     starmap(quadrant: Quadrants): Promise<any>;
+    skills(): Promise<any>;
     objects(count?: number, offset?: number): Promise<{
         objects: Array<IObject>;
         hasNext: boolean;

@@ -127,6 +127,17 @@ export class Account extends Base {
         } as any;
     }
 
+    @Base.request('SKILLS' as SignalType)
+    public async skills(): Promise<any> {
+        return {
+            direction: SignalDirection.OUT,
+            type: 'SKILLS' as SignalType,
+            payload: {},
+            emitter: [],
+            catcher: []
+        } as any;
+    }
+
     // --- SECURED -----------------------------------------------------------------------------------------------------
 
     @Base.request(SignalType.RECEIVE_OBJECTS)
