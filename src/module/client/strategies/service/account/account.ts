@@ -128,11 +128,11 @@ export class Account extends Base {
     }
 
     @Base.request('SKILLS' as SignalType)
-    public async skills(): Promise<any> {
+    public async skills(type: number): Promise<any> {
         return {
             direction: SignalDirection.OUT,
             type: 'SKILLS' as SignalType,
-            payload: {},
+            payload: {type},
             emitter: [],
             catcher: []
         } as any;
