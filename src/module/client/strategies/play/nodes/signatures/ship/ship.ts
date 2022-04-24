@@ -77,6 +77,34 @@ export class Ship extends NodeBase {
         } as any;
     }
 
+    @Base.request('LEARN' as SignalType)
+    public async learn(type: number) {
+        const {secure} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: 'LEARN' as SignalType,
+            payload: {type},
+            emitter: [],
+            catcher: [this.uuid],
+            secure
+        } as any;
+    }
+
+    @Base.request('SKILL' as SignalType)
+    public async skill(type: number, payload: any) {
+        const {secure} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: 'SKILL' as SignalType,
+            payload: {type, payload: JSON.stringify(payload)},
+            emitter: [],
+            catcher: [this.uuid],
+            secure
+        } as any;
+    }
+
     // --- SECTION [IN SPACE] ------------------------------------------------------------------------------------------
 
     @Base.request(SignalType.LANDING_SUCCESS)
@@ -219,6 +247,34 @@ export class Ship extends NodeBase {
             direction: SignalDirection.OUT,
             type: SignalType.ACCEPT,
             payload: {uuid, count},
+            emitter: [],
+            catcher: [this.uuid],
+            secure
+        } as any;
+    }
+
+    @Base.request('AGREE' as SignalType)
+    public async agree(uuid: string) {
+        const {secure} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: 'AGREE' as SignalType,
+            payload: {uuid},
+            emitter: [],
+            catcher: [this.uuid],
+            secure
+        } as any;
+    }
+
+    @Base.request('OVERVIEW' as SignalType)
+    public async overview() {
+        const {secure} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: 'OVERVIEW' as SignalType,
+            payload: {},
             emitter: [],
             catcher: [this.uuid],
             secure

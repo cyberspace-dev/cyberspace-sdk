@@ -58,7 +58,8 @@ export enum T22Equipment {
 
 export enum T23Loot {
     EMBRYO = 231,
-    VIRUS = 232
+    VIRUS = 232,
+    CPU = 233
 }
 
 export enum T62Destroyer {

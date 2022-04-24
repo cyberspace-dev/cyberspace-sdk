@@ -43,6 +43,7 @@ export interface IBShip extends IBBillable {
         _v                  : number;
     }
 
+    quest?      : any;
     target?     : any;
     ensurance?  : string;
 

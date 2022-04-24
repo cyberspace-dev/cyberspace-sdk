@@ -37,6 +37,7 @@ export interface IBShip extends IBBillable {
         [Slot.ARTIFACT4]: ISlot;
         _v: number;
     };
+    quest?: any;
     target?: any;
     ensurance?: string;
 }
