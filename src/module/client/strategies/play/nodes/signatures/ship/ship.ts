@@ -253,20 +253,6 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request('AGREE' as SignalType)
-    public async agree(uuid: string) {
-        const {secure} = this;
-
-        return {
-            direction: SignalDirection.OUT,
-            type: 'AGREE' as SignalType,
-            payload: {uuid},
-            emitter: [],
-            catcher: [this.uuid],
-            secure
-        } as any;
-    }
-
     @Base.request('OVERVIEW' as SignalType)
     public async overview() {
         const {secure} = this;
@@ -275,6 +261,20 @@ export class Ship extends NodeBase {
             direction: SignalDirection.OUT,
             type: 'OVERVIEW' as SignalType,
             payload: {},
+            emitter: [],
+            catcher: [this.uuid],
+            secure
+        } as any;
+    }
+
+    @Base.request('ANSWER' as SignalType)
+    public async answer(selected: number) {
+        const {secure} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: 'ANSWER' as SignalType,
+            payload: {selected},
             emitter: [],
             catcher: [this.uuid],
             secure
