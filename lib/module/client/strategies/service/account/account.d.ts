@@ -25,7 +25,7 @@ export declare class Account extends Base {
     update(email: string, name: string, role: number, twitter: string, selected: number, password: string, newPassword?: string): Promise<any>;
     profile(): Promise<IProfile>;
     assemble(): Promise<any>;
-    private details;
+    private location;
     private upload;
     private online;
     private bonus;

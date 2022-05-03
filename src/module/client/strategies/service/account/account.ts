@@ -198,13 +198,13 @@ export class Account extends Base {
 
     // --- METHODS [PRIVATE OPEN] --------------------------------------------------------------------------------------
 
-    @Base.request(SignalType.DETAILS)
-    private async details(uuid: string): Promise<any> {
+    @Base.request('LOCATION' as SignalType)
+    private async location(uuid: string): Promise<any> {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: SignalType.DETAILS,
+            type: 'LOCATION' as SignalType,
             payload: {uuid},
             emitter: [],
             catcher: [],
