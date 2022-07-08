@@ -190,7 +190,7 @@ export class Ship extends NodeBase {
             secure
         } as any;
 
-        weapons.forEach((index: number) => signal.payload['weapon' + index] = true);
+        weapons.forEach((index: number) => signal.payload['WEAPON' + index] = true);
 
         return signal;
     }
