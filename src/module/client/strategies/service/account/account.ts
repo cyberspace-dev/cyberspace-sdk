@@ -60,8 +60,10 @@ export class Account extends Base {
         throw new Error(reason);
     }
 
-    public async getShip(uuid: string, system: string): Promise<Ship> {
+    public async getShip(uuid: string): Promise<Ship> {
         const {secure} = this;
+
+        const {point: {system}} = await this.location(uuid);
         const sector: any = await Play.connect(secure, system);
 
         try {
@@ -76,8 +78,10 @@ export class Account extends Base {
         }
     }
 
-    public async getPlanet(uuid: string, system: string): Promise<Planet> {
+    public async getPlanet(uuid: string): Promise<Planet> {
         const {secure} = this;
+
+        const {point: {system}} = await this.location(uuid);
         const sector: any = await Play.connect(secure, system);
 
         try {

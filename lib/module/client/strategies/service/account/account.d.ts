@@ -12,8 +12,8 @@ export declare class Account extends Base {
     secure: string;
     constructor(socket: any, subject: Subject<any>, competition: any);
     signin(email: string, password: string): Promise<any>;
-    getShip(uuid: string, system: string): Promise<Ship>;
-    getPlanet(uuid: string, system: string): Promise<Planet>;
+    getShip(uuid: string): Promise<Ship>;
+    getPlanet(uuid: string): Promise<Planet>;
     search(uuidOrName: string): Promise<IProfile>;
     rankings(count: number, offset: number): Promise<Array<IProfile>>;
     starmap(quadrant: Quadrants): Promise<any>;
