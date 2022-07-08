@@ -49,7 +49,7 @@ Look at objects you own and select any ship.
 
 ```typescript
 const {objects} = await account.objects();
-const instance = objects.find((object: any) => object.type === 'Ship');
+const {uuid} = objects.find((object: any) => object.type === 'Ship');
 ```
 
 If you don't have a ship yet, use the following method to create a new one.
@@ -61,7 +61,7 @@ await account.assemble();
 Take control over your ship.
 
 ```typescript
-const ship = await account.getShip(instance.uuid, instance.system);
+const ship = await account.getShip(uuid);
 ```
 
 Escape from the planet and explore other commands in our wiki.
