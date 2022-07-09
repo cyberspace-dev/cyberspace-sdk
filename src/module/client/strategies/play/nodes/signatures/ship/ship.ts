@@ -212,7 +212,7 @@ export class Ship extends NodeBase {
     }
 
     @Base.request(SignalType.FUEL_SUCCESS)
-    public async fuel() {
+    public async refuel() {
         const {uuid, secure} = this;
 
         return {

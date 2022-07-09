@@ -17,7 +17,7 @@ export declare class Ship extends NodeBase {
         reason: string;
     }>>;
     escape(): Promise<any>;
-    fuel(): Promise<any>;
+    refuel(): Promise<any>;
     repair(): Promise<any>;
     accept(uuid: string, count?: number): Promise<any>;
     overview(): Promise<any>;
