@@ -21,7 +21,9 @@ export declare enum T5Station {
     MEDICAL = 54,
     MILITARY = 55,
     PIRATE = 56,
-    DREADNOUGHT = 57
+    STARGATE = 57,
+    STARGATE_TEMPORARILY = 58,
+    DREADNOUGHT = 59
 }
 export declare enum T6Ship {
     SHUTTLE = 61,
@@ -48,7 +50,8 @@ export declare enum T22Equipment {
 export declare enum T23Loot {
     EMBRYO = 231,
     VIRUS = 232,
-    CPU = 233
+    CPU = 233,
+    CONTAINER = 234
 }
 export declare enum T62Destroyer {
     DESTROYER_HEAVY = 621,
@@ -75,7 +78,7 @@ export declare enum T67Corvette {
     EXTERMINATOR = 672
 }
 export declare enum T2209Weapon {
-    FRAGMENTAL = 22091,
+    FRAGMENTARY = 22091,
     LASER = 22092,
     ROCKET = 22093
 }

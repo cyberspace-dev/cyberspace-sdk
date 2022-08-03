@@ -116,4 +116,8 @@ export class Utils {
         return true;
     }
 
+    public static convertToSeconds(minutes: number): number {
+        return 60000 * minutes;
+    }
+
 }

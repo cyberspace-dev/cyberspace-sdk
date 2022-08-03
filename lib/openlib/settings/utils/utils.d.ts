@@ -10,4 +10,5 @@ export declare class Utils {
     static verify(jwt: any, token: string, secret?: string): Promise<any>;
     static save(instance: any): Promise<void>;
     static validate(signal: ISignal): boolean;
+    static convertToSeconds(minutes: number): number;
 }
