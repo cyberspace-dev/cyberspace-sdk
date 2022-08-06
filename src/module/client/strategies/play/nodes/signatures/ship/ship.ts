@@ -91,6 +91,8 @@ export class Ship extends NodeBase {
         } as any;
     }
 
+    // --- SECTION [IN SPACE] ------------------------------------------------------------------------------------------
+
     @Base.request('SKILL' as SignalType)
     public async skill(type: number, payload: any) {
         const {secure} = this;
@@ -104,8 +106,6 @@ export class Ship extends NodeBase {
             secure
         } as any;
     }
-
-    // --- SECTION [IN SPACE] ------------------------------------------------------------------------------------------
 
     @Base.request(SignalType.LANDING_SUCCESS)
     public async landing(uuid: string) {
