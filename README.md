@@ -47,26 +47,20 @@ const account = await Account.connect();
 await account.signin('your@email.com', 'password');
 ```
 
-Look at objects you own and select any ship.
-
-```typescript
-const {objects} = await account.objects();
-const {uuid} = objects.find((object: any) => object.type === 'Ship');
-```
-
 If you don't have a ship yet, use the following method to create a new one.
 
 ```typescript
 await account.assemble();
 ```
 
-Take control over your ship.
+Look at the objects you own and take control over your ship.
 
 ```typescript
-const ship = await account.getShip(uuid);
+const {objects: [first]} = await account.objects();
+const ship = await account.getShip(first.uuid);
 ```
 
-Escape from the planet and explore other commands in our wiki.
+Escape the pilot center and learn other commands on our wiki page.
 
 ```typescript
 await ship.escape();
