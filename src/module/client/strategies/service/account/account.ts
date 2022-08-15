@@ -6,7 +6,7 @@ import {Ship}               from '../../play/nodes/signatures/ship/ship';
 import {Planet}             from '../../play/nodes/signatures/planet/planet';
 import {Base}               from '../../../base/base';
 import {Utils}              from '../../../../utils/utils';
-import {IObject}            from '../../../../../openlib';
+import {IEntityModel}       from '../../../../../openlib';
 import {IProfile}           from '../../../../../openlib';
 import {Quadrants}          from '../../../../../openlib';
 import {SignalType}         from '../../../../../openlib';
@@ -145,7 +145,7 @@ export class Account extends Base {
     // --- SECURED -----------------------------------------------------------------------------------------------------
 
     @Base.request(SignalType.RECEIVE_OBJECTS)
-    public async objects(count?: number, offset?: number): Promise<{objects: Array<IObject>, hasNext: boolean}> {
+    public async objects(count?: number, offset?: number): Promise<{objects: Array<IEntityModel>, hasNext: boolean}> {
         const {secure} = this;
 
         return {
