@@ -4,6 +4,5 @@ import {IDeal}      from '../../../parts/deal/deal';
 export interface IBDockable extends IBBillable {
 
     deals   : Array<IDeal>;
-    quests  : Array<any>;
 
 }

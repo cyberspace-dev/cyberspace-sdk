@@ -2,7 +2,7 @@ import { Subject } from 'rxjs';
 import { Ship } from '../../play/nodes/signatures/ship/ship';
 import { Planet } from '../../play/nodes/signatures/planet/planet';
 import { Base } from '../../../base/base';
-import { IObject } from '../../../../../openlib';
+import { IEntityModel } from '../../../../../openlib';
 import { IProfile } from '../../../../../openlib';
 import { Quadrants } from '../../../../../openlib';
 export declare class Account extends Base {
@@ -19,7 +19,7 @@ export declare class Account extends Base {
     starmap(quadrant: Quadrants): Promise<any>;
     skills(type: number): Promise<any>;
     objects(count?: number, offset?: number): Promise<{
-        objects: Array<IObject>;
+        objects: Array<IEntityModel>;
         hasNext: boolean;
     }>;
     update(email: string, name: string, role: number, twitter: string, selected: number, password: string, newPassword?: string): Promise<any>;

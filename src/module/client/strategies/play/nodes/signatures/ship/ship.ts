@@ -77,13 +77,13 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request('LEARN' as SignalType)
+    @Base.request(SignalType.LEARN)
     public async learn(type: number) {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'LEARN' as SignalType,
+            type: SignalType.LEARN,
             payload: {type},
             emitter: [],
             catcher: [this.uuid],
@@ -93,13 +93,13 @@ export class Ship extends NodeBase {
 
     // --- SECTION [IN SPACE] ------------------------------------------------------------------------------------------
 
-    @Base.request('SKILL' as SignalType)
+    @Base.request(SignalType.SKILL)
     public async skill(type: number, payload: any) {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'SKILL' as SignalType,
+            type: SignalType.SKILL,
             payload: {type, payload: JSON.stringify(payload)},
             emitter: [],
             catcher: [this.uuid],
@@ -253,13 +253,13 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request('OVERVIEW' as SignalType)
+    @Base.request(SignalType.OVERVIEW)
     public async overview() {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'OVERVIEW' as SignalType,
+            type: SignalType.OVERVIEW,
             payload: {},
             emitter: [],
             catcher: [this.uuid],
@@ -267,13 +267,13 @@ export class Ship extends NodeBase {
         } as any;
     }
 
-    @Base.request('ANSWER' as SignalType)
+    @Base.request(SignalType.ANSWER)
     public async answer(selected: number) {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'ANSWER' as SignalType,
+            type: SignalType.ANSWER,
             payload: {selected},
             emitter: [],
             catcher: [this.uuid],
@@ -318,13 +318,13 @@ export class Ship extends NodeBase {
 
     // --- SECTION [CHEATS] --------------------------------------------------------------------------------------------
 
-    @Base.request('CHEAT' as SignalType)
+    @Base.request(SignalType.CHEAT)
     public async cheat(code: string): Promise<any> {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'CHEAT' as SignalType,
+            type: SignalType.CHEAT,
             payload: {code},
             emitter: [],
             catcher: [this.uuid],

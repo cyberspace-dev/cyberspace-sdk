@@ -1,6 +1,4 @@
-import {ISignal}            from '../interfaces/signal/signal';
-import {SignalType}         from '../enums/signal/type';
-import {SignalDirection}    from '../enums/signal/direction';
+import {ISignal}    from '../interfaces/signal/signal';
 
 const pify = require('pify');
 
@@ -87,34 +85,6 @@ export class Utils {
     }
 
     // --- SECTION [ADDITIONAL] ----------------------------------------------------------------------------------------
-
-    public static validate(signal: ISignal): boolean {
-        if (!signal ||
-            !signal.emitter ||
-            !signal.catcher ||
-            !signal.type ||
-            !signal.direction ||
-            (!signal.payload && signal.direction === SignalDirection.IN) ||
-            !Array.isArray(signal.emitter) ||
-            !Array.isArray(signal.catcher)) return false;
-
-        if (signal.type === SignalType.UPLOAD) return true;
-        if (signal.direction === SignalDirection.OUT) return true;
-
-        const keys = Object.keys(signal.payload);
-        if (keys.length > 20) return false;
-
-        for (const key of keys) {
-            if (key.length > 60) return false;
-            if (key === 'token') continue;
-
-            const field = signal.payload[key];
-            if (typeof field === 'object') return false;
-            if (typeof field === 'string' && field.length > 3000) return false;
-        }
-
-        return true;
-    }
 
     public static convertToSeconds(minutes: number): number {
         return 60000 * minutes;

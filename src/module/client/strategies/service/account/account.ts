@@ -131,11 +131,11 @@ export class Account extends Base {
         } as any;
     }
 
-    @Base.request('SKILLS' as SignalType)
+    @Base.request(SignalType.SKILLS)
     public async skills(type: number): Promise<any> {
         return {
             direction: SignalDirection.OUT,
-            type: 'SKILLS' as SignalType,
+            type: SignalType.SKILLS,
             payload: {type},
             emitter: [],
             catcher: []
@@ -202,13 +202,13 @@ export class Account extends Base {
 
     // --- METHODS [PRIVATE OPEN] --------------------------------------------------------------------------------------
 
-    @Base.request('LOCATION' as SignalType)
+    @Base.request(SignalType.LOCATION)
     private async location(uuid: string): Promise<any> {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
-            type: 'LOCATION' as SignalType,
+            type: SignalType.LOCATION,
             payload: {uuid},
             emitter: [],
             catcher: [],
