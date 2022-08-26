@@ -44,7 +44,7 @@ export class Base {
                     const {secure, payload: {uuid: channel}} = request;
 
                     const signal: any = {
-                        type: SignalType.CHANGE_STRATEGY,
+                        type: 'SWITCH_STRATEGY' as SignalType,
                         payload: {strategy: 'PLAY', channel},
                         direction: SignalDirection.IN,
                         emitter: [],
@@ -52,7 +52,7 @@ export class Base {
                         secure
                     };
 
-                    socket.send(signal);
+                    await Utils.promisify(socket, subject, signal);
                 }
                 // --- CHANGE CHANNEL AFTER WARP -----------------------------------------------------------------------
 
