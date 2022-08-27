@@ -40,7 +40,10 @@ export class Base {
                 const response: any = await Utils.promisify(socket, subject, request);
 
                 // --- CHANGE CHANNEL AFTER WARP -----------------------------------------------------------------------
-                if (response.type === SignalType.WARP_SUCCESS) {
+                if (
+                    response.type === SignalType.WARP_SUCCESS ||
+                    (response.type === SignalType.LANDING_SUCCESS && response.payload && response.payload.isStargate)
+                ) {
                     const {secure, payload: {uuid: channel}} = request;
 
                     const signal: any = {
