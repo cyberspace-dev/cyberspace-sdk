@@ -44,7 +44,7 @@ export class Base {
                     response.type === SignalType.WARP_SUCCESS ||
                     (response.type === SignalType.LANDING_SUCCESS && response.payload && response.payload.isStargate)
                 ) {
-                    const {secure, payload: {uuid: channel}} = request;
+                    const {secure, payload: {uuid: channel}} = response;
 
                     const signal: any = {
                         type: 'SWITCH_STRATEGY' as SignalType,
