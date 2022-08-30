@@ -9,7 +9,7 @@ export class Planet extends NodeBase {
     // --- METHODS [PUBLIC] ----------------------------------------------------------------------------------------
 
     @Base.request(SignalType.MAKE_SUCCESS)
-    public async make(type: T22Equipment, level: number): Promise<string> {
+    public async make(type: T22Equipment, level: number): Promise<{uuid: string}> {
         const {uuid, secure} = this;
 
         return {
@@ -23,7 +23,7 @@ export class Planet extends NodeBase {
     }
 
     @Base.request(SignalType.OPEN_SUCCESS)
-    public async sell(uuid: string, price: number): Promise<string> {
+    public async sell(uuid: string, price: number): Promise<{uuid: string}> {
         const {secure} = this;
 
         return {
@@ -37,7 +37,7 @@ export class Planet extends NodeBase {
     }
 
     @Base.request(SignalType.OPEN_SUCCESS)
-    public async buy(expected: T22Equipment, price: number, count?: number): Promise<string> {
+    public async buy(expected: T22Equipment, price: number, count?: number): Promise<{uuid: string}> {
         const {secure} = this;
 
         return {
