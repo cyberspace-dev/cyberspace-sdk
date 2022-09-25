@@ -20,8 +20,10 @@ export declare class Ship extends NodeBase {
     refuel(): Promise<any>;
     repair(): Promise<any>;
     accept(uuid: string, count?: number): Promise<any>;
-    overview(): Promise<any>;
-    answer(selected: number): Promise<any>;
+    viewQuest(): Promise<any>;
+    answerQuest(selected: number): Promise<any>;
+    joinGroup(uuid: string, password: string): Promise<any>;
+    leaveGroup(): Promise<any>;
     transfer(uuid: string, type: string): Promise<any>;
     apply(...payload: any[]): Promise<any>;
     cheat(code: string): Promise<any>;

@@ -254,7 +254,7 @@ export class Ship extends NodeBase {
     }
 
     @Base.request(SignalType.OVERVIEW)
-    public async overview() {
+    public async viewQuest() {
         const {secure} = this;
 
         return {
@@ -268,13 +268,41 @@ export class Ship extends NodeBase {
     }
 
     @Base.request(SignalType.ANSWER)
-    public async answer(selected: number) {
+    public async answerQuest(selected: number) {
         const {secure} = this;
 
         return {
             direction: SignalDirection.OUT,
             type: SignalType.ANSWER,
             payload: {selected},
+            emitter: [],
+            catcher: [this.uuid],
+            secure
+        } as any;
+    }
+
+    @Base.request('JOIN_GROUP' as SignalType)
+    public async joinGroup(uuid: string, password: string) {
+        const {secure} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: 'JOIN_GROUP' as SignalType,
+            payload: {uuid, password},
+            emitter: [],
+            catcher: [this.uuid],
+            secure
+        } as any;
+    }
+
+    @Base.request('LEAVE_GROUP' as SignalType)
+    public async leaveGroup() {
+        const {secure} = this;
+
+        return {
+            direction: SignalDirection.OUT,
+            type: 'LEAVE_GROUP' as SignalType,
+            payload: {},
             emitter: [],
             catcher: [this.uuid],
             secure
