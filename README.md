@@ -2,8 +2,6 @@
 
 ![alt text](https://cyberspace.dev/assets/img/pages/master/social.png)
 
-We love Russia :heartbeat::heartbeat::heartbeat:
-
 ### **Description**
 
 Greetings, pilot! 
