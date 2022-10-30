@@ -72,6 +72,9 @@ export { IBStationPilot } from './settings/interfaces/signatures/core/entity/sig
 export { IBStationBusiness } from './settings/interfaces/signatures/core/entity/signatures/nodes/dockable/signatures/station/signatures/52-business';
 export { IBStationScientific } from './settings/interfaces/signatures/core/entity/signatures/nodes/dockable/signatures/station/signatures/53-scientific';
 export { IBStationPirate } from './settings/interfaces/signatures/core/entity/signatures/nodes/dockable/signatures/station/signatures/56-pirate';
+export { IBStationStargate } from './settings/interfaces/signatures/core/entity/signatures/nodes/dockable/signatures/station/signatures/57-stargate';
+export { IBStationStargateTemporary } from './settings/interfaces/signatures/core/entity/signatures/nodes/dockable/signatures/station/signatures/58-stargate-temporary';
+export { IBStationDreadnought } from './settings/interfaces/signatures/core/entity/signatures/nodes/dockable/signatures/station/signatures/59-dreadnought';
 export { IBShip } from './settings/interfaces/signatures/core/entity/signatures/nodes/ship/ship';
 export { IBSystem } from './settings/interfaces/signatures/core/entity/signatures/nodes/system/system';
 export { IGame } from './settings/interfaces/signatures/core/game';

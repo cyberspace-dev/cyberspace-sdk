@@ -10,4 +10,7 @@ export enum EffectType {
     START = 9,
     MOVE = 10,
     STOP = 11,
+    OPEN = 12,
+    WORK = 13,
+    CLOSE = 14
 }

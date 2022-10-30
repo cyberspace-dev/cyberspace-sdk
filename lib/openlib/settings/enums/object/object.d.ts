@@ -7,7 +7,7 @@ export declare enum TObject {
     SHIP = 6,
     TRAP = 7,
     ROCKET = 8,
-    DROID = 9
+    DRONE = 9
 }
 export declare enum T2Cargo {
     MINERAL = 21,

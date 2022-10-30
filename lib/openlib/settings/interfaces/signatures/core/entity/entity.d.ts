@@ -7,4 +7,5 @@ export interface IEntityModel {
     body: any;
     nodes?: Array<IEntityModel>;
     metadata?: any;
+    buffs?: Array<string>;
 }

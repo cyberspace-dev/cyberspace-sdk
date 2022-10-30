@@ -49,7 +49,11 @@ export enum ModifierCompiled {
 
     /* --- WEIGHT --------------------------------------------------------------------------------------------------- */
 
-    COMPILED_WEIGHT = 'COMPILED_WEIGHT'
+    COMPILED_WEIGHT = 'COMPILED_WEIGHT',
+
+    /* --- OTHER ---------------------------------------------------------------------------------------------------- */
+
+    COMPILED_MISS_CHANCE = 'COMPILED_MISS_CHANCE'
 }
 
 export enum ModifierType {
@@ -132,6 +136,10 @@ export enum ModifierType {
     WEAPON_DAMAGE_INC = 'WEAPON_DAMAGE_INC',
     WEAPON_DAMAGE_DEC = 'WEAPON_DAMAGE_DEC',
 
-    WEAPON_DELAY_INC = 'WEAPON_DELAY_INC'
+    WEAPON_DELAY_INC = 'WEAPON_DELAY_INC',
+
+    /* --- OTHER ---------------------------------------------------------------------------------------------------- */
+
+    MISS_CHANCE = 'MISS_CHANCE'
 
 }
