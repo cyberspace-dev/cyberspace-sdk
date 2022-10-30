@@ -2,6 +2,7 @@ import {Subject}            from 'rxjs';
 
 import {Ship}               from './nodes/signatures/ship/ship';
 import {Planet}             from './nodes/signatures/planet/planet';
+import {Station}            from './nodes/signatures/station/station';
 import {Base}               from '../../base/base';
 import {Utils}              from '../../../utils/utils';
 import {SignalType}         from '../../../../openlib';
@@ -21,7 +22,7 @@ export class Play extends Base {
 
     // --- METHODS [PUBLIC ASYNC] --------------------------------------------------------------------------------------
 
-    public async get(uuid: string): Promise<Ship | Planet> {
+    public async get(uuid: string): Promise<Ship | Station | Planet> {
         const {socket, subject, secure} = this;
 
         const signal = {
@@ -38,6 +39,7 @@ export class Play extends Base {
             const {payload: {type}} = response;
 
             if (`${type}`.startsWith('6')) return new Ship(socket, subject, uuid, secure);
+            if (`${type}`.startsWith('5')) return new Station(socket, subject, uuid, secure);
             if (`${type}`.startsWith('4')) return new Planet(socket, subject, uuid, secure);
 
             response.payload.reason = 'UNEXPECTED_TYPE';
