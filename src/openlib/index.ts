@@ -77,5 +77,6 @@ export {IBStationStargateTemporary}     from './settings/interfaces/signatures/c
 export {IBStationDreadnought}           from './settings/interfaces/signatures/core/entity/signatures/nodes/dockable/signatures/station/signatures/59-dreadnought';
 export {IBShip}                         from './settings/interfaces/signatures/core/entity/signatures/nodes/ship/ship';
 export {IBSystem}                       from './settings/interfaces/signatures/core/entity/signatures/nodes/system/system';
+export {IBRocket}                       from './settings/interfaces/signatures/core/entity/signatures/nodes/rocket/rocket';
 export {IGame}                          from './settings/interfaces/signatures/core/game';
 export {IInterval}                      from './settings/interfaces/signatures/core/interval';
