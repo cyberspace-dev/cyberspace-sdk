@@ -53,7 +53,7 @@ export class Admin extends Base {
         return {
             direction: SignalDirection.OUT,
             type: SignalType.INJECT,
-            payload: {fund, start, finish, version, companies},
+            payload: {fund, start, finish, version, companies: JSON.stringify(companies)},
             emitter: [],
             catcher: [],
             secure: token
