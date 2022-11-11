@@ -159,13 +159,13 @@ export class Admin extends Base {
     }
 
     @Base.request(SignalType.UPLOAD)
-    private async upload(lead: string) {
+    private async upload(lead: any) {
         const {token} = this;
 
         return {
             direction: SignalDirection.OUT,
             type: SignalType.UPLOAD,
-            payload: {lead},
+            payload: {lead: JSON.stringify(lead)},
             emitter: [],
             catcher: [],
             secure: token
