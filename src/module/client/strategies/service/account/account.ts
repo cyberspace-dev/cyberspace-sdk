@@ -3,8 +3,6 @@ import {Subject}            from 'rxjs';
 import {Admin}              from '../admin/admin';
 import {Play}               from '../../play/play';
 import {Ship}               from '../../play/nodes/signatures/ship/ship';
-import {Planet}             from '../../play/nodes/signatures/planet/planet';
-import {Station}            from '../../play/nodes/signatures/station/station';
 import {Base}               from '../../../base/base';
 import {Utils}              from '../../../../utils/utils';
 import {IEntityModel}       from '../../../../../openlib';
@@ -65,51 +63,15 @@ export class Account extends Base {
         const {secure} = this;
 
         const {point: {system}} = await this.location(uuid);
-        const sector: any = await Play.connect(secure, system);
+        const instance: any = await Play.connect(secure, system);
 
         try {
-            const ship = await sector.get(uuid);
+            const ship = await instance.get(uuid);
             if (ship instanceof Ship) return ship;
 
             throw new Error('UNEXPECTED RESULT');
         } catch (e) {
-            sector.dispose();
-
-            throw e;
-        }
-    }
-
-    public async getPlanet(uuid: string): Promise<Planet> {
-        const {secure} = this;
-
-        const {point: {system}} = await this.location(uuid);
-        const sector: any = await Play.connect(secure, system);
-
-        try {
-            const planet = await sector.get(uuid);
-            if (planet instanceof Planet) return planet;
-
-            throw new Error('UNEXPECTED RESULT');
-        } catch (e) {
-            sector.dispose();
-
-            throw e;
-        }
-    }
-
-    public async getStation(uuid: string): Promise<Station> {
-        const {secure} = this;
-
-        const {point: {system}} = await this.location(uuid);
-        const sector: any = await Play.connect(secure, system);
-
-        try {
-            const station = await sector.get(uuid);
-            if (station instanceof Station) return station;
-
-            throw new Error('UNEXPECTED RESULT');
-        } catch (e) {
-            sector.dispose();
+            instance.dispose();
 
             throw e;
         }

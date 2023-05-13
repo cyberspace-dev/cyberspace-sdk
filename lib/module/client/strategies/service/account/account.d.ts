@@ -1,7 +1,5 @@
 import { Subject } from 'rxjs';
 import { Ship } from '../../play/nodes/signatures/ship/ship';
-import { Planet } from '../../play/nodes/signatures/planet/planet';
-import { Station } from '../../play/nodes/signatures/station/station';
 import { Base } from '../../../base/base';
 import { IEntityModel } from '../../../../../openlib';
 import { IProfile } from '../../../../../openlib';
@@ -14,8 +12,6 @@ export declare class Account extends Base {
     constructor(socket: any, subject: Subject<any>, competition: any);
     signin(email: string, password: string): Promise<any>;
     getShip(uuid: string): Promise<Ship>;
-    getPlanet(uuid: string): Promise<Planet>;
-    getStation(uuid: string): Promise<Station>;
     search(uuidOrName: string): Promise<IProfile>;
     rankings(count: number, offset: number): Promise<Array<IProfile>>;
     starmap(quadrant: Quadrants): Promise<any>;

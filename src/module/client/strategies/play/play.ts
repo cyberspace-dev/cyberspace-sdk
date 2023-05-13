@@ -39,8 +39,6 @@ export class Play extends Base {
             const {payload: {type}} = response;
 
             if (`${type}`.startsWith('6')) return new Ship(socket, subject, uuid, secure);
-            if (`${type}`.startsWith('5')) return new Station(socket, subject, uuid, secure);
-            if (`${type}`.startsWith('4')) return new Planet(socket, subject, uuid, secure);
 
             response.payload.reason = 'UNEXPECTED_TYPE';
         }
