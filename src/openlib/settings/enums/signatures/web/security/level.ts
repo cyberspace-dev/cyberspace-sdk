@@ -1,4 +1,4 @@
 export enum SecurityLevel {
-    SAFE = 1,
-    RISKY = 2
+    SAFE = 'SAFE',
+    RISKY = 'RISKY'
 }
