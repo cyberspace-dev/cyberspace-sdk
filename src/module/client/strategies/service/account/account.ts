@@ -123,6 +123,17 @@ export class Account extends Base {
         } as any;
     }
 
+    @Base.request('SLOTS' as SignalType)
+    public async slots(type: number): Promise<any> {
+        return {
+            direction: SignalDirection.OUT,
+            type: 'SLOTS' as SignalType,
+            payload: {type},
+            emitter: [],
+            catcher: []
+        } as any;
+    }
+
     // --- SECURED -----------------------------------------------------------------------------------------------------
 
     @Base.request(SignalType.RECEIVE_OBJECTS)

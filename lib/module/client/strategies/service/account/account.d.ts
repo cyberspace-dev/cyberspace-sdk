@@ -16,6 +16,7 @@ export declare class Account extends Base {
     rankings(count: number, offset: number): Promise<Array<IProfile>>;
     starmap(quadrant: Quadrants): Promise<any>;
     skills(type: number): Promise<any>;
+    slots(type: number): Promise<any>;
     objects(count?: number, offset?: number): Promise<{
         objects: Array<IEntityModel>;
         hasNext: boolean;
