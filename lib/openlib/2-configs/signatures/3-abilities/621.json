@@ -1,0 +1,13 @@
+{
+    "abilities": [
+        { "type": 6211, "level": 11, "max": 1, "position": { "x": 1, "y": 1 } },
+        { "type": 6212, "level": 11, "max": 1, "position": { "x": 2, "y": 1 } },
+        { "type": 6213, "level": 12, "max": 2, "position": { "x": 2, "y": 2 }, "required": { "type": 6212, "min": 1 } },
+        { "type": 6214, "level": 11, "max": 5, "position": { "x": 3, "y": 1 } },
+        { "type": 6215, "level": 13, "max": 3, "position": { "x": 1, "y": 3 } },
+        { "type": 6216, "level": 13, "max": 3, "position": { "x": 3, "y": 3 }, "required": { "type": 6214, "min": 5 } },
+        { "type": 6217, "level": 14, "max": 3, "position": { "x": 2, "y": 4 }, "required": { "type": 6213, "min": 1 } },
+        { "type": 6218, "level": 15, "max": 1, "position": { "x": 1, "y": 5 } },
+        { "type": 6219, "level": 15, "max": 1, "position": { "x": 3, "y": 5 } }
+    ]
+}

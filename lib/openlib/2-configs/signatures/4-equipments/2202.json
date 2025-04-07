@@ -1,0 +1,124 @@
+{
+    "configs": [
+        {
+            "level": 1,
+            "modifiers": [
+                {
+                    "name": "ENGINE_SPEED",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "name": "ENGINE_WARP",
+                    "min": 10,
+                    "max": 12
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "modifiers": [
+                {
+                    "name": "ENGINE_SPEED",
+                    "min": 18,
+                    "max": 21
+                },
+                {
+                    "name": "ENGINE_WARP",
+                    "min": 14,
+                    "max": 16
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "modifiers": [
+                {
+                    "name": "ENGINE_SPEED",
+                    "min": 24,
+                    "max": 27
+                },
+                {
+                    "name": "ENGINE_WARP",
+                    "min": 18,
+                    "max": 20
+                }
+            ]
+        },
+        {
+            "level": 4,
+            "modifiers": [
+                {
+                    "name": "ENGINE_SPEED",
+                    "min": 30,
+                    "max": 33
+                },
+                {
+                    "name": "ENGINE_WARP",
+                    "min": 36,
+                    "max": 39
+                }
+            ]
+        },
+        {
+            "level": 5,
+            "modifiers": [
+                {
+                    "name": "ENGINE_SPEED",
+                    "min": 42,
+                    "max": 45
+                },
+                {
+                    "name": "ENGINE_WARP",
+                    "min": 26,
+                    "max": 28
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "modifiers": [
+                {
+                    "name": "ENGINE_SPEED",
+                    "min": 48,
+                    "max": 51
+                },
+                {
+                    "name": "ENGINE_WARP",
+                    "min": 30,
+                    "max": 32
+                }
+            ]
+        },
+        {
+            "level": 7,
+            "modifiers": [
+                {
+                    "name": "ENGINE_SPEED",
+                    "min": 54,
+                    "max": 57
+                },
+                {
+                    "name": "ENGINE_WARP",
+                    "min": 34,
+                    "max": 36
+                }
+            ]
+        },
+        {
+            "level": 8,
+            "modifiers": [
+                {
+                    "name": "ENGINE_SPEED",
+                    "min": 60,
+                    "max": 65
+                },
+                {
+                    "name": "ENGINE_WARP",
+                    "min": 38,
+                    "max": 40
+                }
+            ]
+        }
+    ]
+}

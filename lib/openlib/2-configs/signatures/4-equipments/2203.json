@@ -1,0 +1,124 @@
+{
+    "configs": [
+        {
+            "level": 1,
+            "modifiers": [
+                {
+                    "name": "TANK_FUEL_TOTAL",
+                    "min": 10,
+                    "max": 10
+                },
+                {
+                    "name": "TANK_FUEL_CURRENT",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "modifiers": [
+                {
+                    "name": "TANK_FUEL_TOTAL",
+                    "min": 15,
+                    "max": 25
+                },
+                {
+                    "name": "TANK_FUEL_CURRENT",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "modifiers": [
+                {
+                    "name": "TANK_FUEL_TOTAL",
+                    "min": 25,
+                    "max": 35
+                },
+                {
+                    "name": "TANK_FUEL_CURRENT",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        },
+        {
+            "level": 4,
+            "modifiers": [
+                {
+                    "name": "TANK_FUEL_TOTAL",
+                    "min": 35,
+                    "max": 45
+                },
+                {
+                    "name": "TANK_FUEL_CURRENT",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        },
+        {
+            "level": 5,
+            "modifiers": [
+                {
+                    "name": "TANK_FUEL_TOTAL",
+                    "min": 45,
+                    "max": 55
+                },
+                {
+                    "name": "TANK_FUEL_CURRENT",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "modifiers": [
+                {
+                    "name": "TANK_FUEL_TOTAL",
+                    "min": 55,
+                    "max": 65
+                },
+                {
+                    "name": "TANK_FUEL_CURRENT",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        },
+        {
+            "level": 7,
+            "modifiers": [
+                {
+                    "name": "TANK_FUEL_TOTAL",
+                    "min": 65,
+                    "max": 75
+                },
+                {
+                    "name": "TANK_FUEL_CURRENT",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        },
+        {
+            "level": 8,
+            "modifiers": [
+                {
+                    "name": "TANK_FUEL_TOTAL",
+                    "min": 75,
+                    "max": 100
+                },
+                {
+                    "name": "TANK_FUEL_CURRENT",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        }
+    ]
+}

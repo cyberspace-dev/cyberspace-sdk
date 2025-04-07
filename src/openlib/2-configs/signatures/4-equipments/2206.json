@@ -1,0 +1,124 @@
+{
+  "configs": [
+    {
+      "level": 1,
+      "modifiers": [
+        {
+          "name": "DROID_POWER_RECOVERY",
+          "min": 1,
+          "max": 1
+        },
+        {
+          "name": "DROID_STRUCTURE_RECOVERY",
+          "min": 1,
+          "max": 1
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "modifiers": [
+        {
+          "name": "DROID_POWER_RECOVERY",
+          "min": 2,
+          "max": 3
+        },
+        {
+          "name": "DROID_STRUCTURE_RECOVERY",
+          "min": 2,
+          "max": 3
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "modifiers": [
+        {
+          "name": "DROID_POWER_RECOVERY",
+          "min": 4,
+          "max": 6
+        },
+        {
+          "name": "DROID_STRUCTURE_RECOVERY",
+          "min": 4,
+          "max": 6
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "modifiers": [
+        {
+          "name": "DROID_POWER_RECOVERY",
+          "min": 7,
+          "max": 9
+        },
+        {
+          "name": "DROID_STRUCTURE_RECOVERY",
+          "min": 7,
+          "max": 9
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "modifiers": [
+        {
+          "name": "DROID_POWER_RECOVERY",
+          "min": 10,
+          "max": 12
+        },
+        {
+          "name": "DROID_STRUCTURE_RECOVERY",
+          "min": 10,
+          "max": 12
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "modifiers": [
+        {
+          "name": "DROID_POWER_RECOVERY",
+          "min": 13,
+          "max": 15
+        },
+        {
+          "name": "DROID_STRUCTURE_RECOVERY",
+          "min": 13,
+          "max": 15
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "modifiers": [
+        {
+          "name": "DROID_POWER_RECOVERY",
+          "min": 16,
+          "max": 18
+        },
+        {
+          "name": "DROID_STRUCTURE_RECOVERY",
+          "min": 16,
+          "max": 18
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "modifiers": [
+        {
+          "name": "DROID_POWER_RECOVERY",
+          "min": 19,
+          "max": 21
+        },
+        {
+          "name": "DROID_STRUCTURE_RECOVERY",
+          "min": 19,
+          "max": 21
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "abilities": [
+    {"type": 631, "level": 6, "max": 2, "position": {"x": 1, "y": 1}},
+    {"type": 632, "level": 6, "max": 1, "position": {"x": 2, "y": 1}},
+    {"type": 633, "level": 7, "max": 1, "position": {"x": 2, "y": 2}, "required": {"type": 632, "min": 1}},
+    {"type": 634, "level": 7, "max": 1, "position": {"x": 3, "y": 2}},
+    {"type": 635, "level": 8, "max": 1, "position": {"x": 3, "y": 3}, "required": {"type": 634, "min": 1}},
+    {"type": 636, "level": 8, "max": 1, "position": {"x": 1, "y": 3}},
+    {"type": 637, "level": 9, "max": 1, "position": {"x": 1, "y": 4}, "required": {"type": 636, "min": 1}},
+    {"type": 638, "level": 9, "max": 1, "position": {"x": 2, "y": 4}},
+    {"type": 639, "level": 10, "max": 1, "position": {"x": 2, "y": 5}, "required": {"type": 638, "min": 1}}
+  ]
+}

@@ -5,6 +5,7 @@ import {Play}               from '../../play/play';
 import {Ship}               from '../../play/nodes/signatures/ship/ship';
 import {Base}               from '../../../base/base';
 import {Utils}              from '../../../../utils/utils';
+import {Config}             from '../../../../../openlib';
 import {IEntityModel}       from '../../../../../openlib';
 import {IProfile}           from '../../../../../openlib';
 import {Quadrants}          from '../../../../../openlib';
@@ -21,23 +22,16 @@ export class Account extends Base {
 
     constructor(
         public socket       : any,
-        public subject      : Subject<any>,
-        public competition  : any
+        public subject      : Subject<any>
     ) {
         super(socket, subject);
+
+        Config.initialize();
     }
 
     // --- SECTION [API] -----------------------------------------------------------------------------------------------
 
     public async signin(email: string, password: string) {
-        if (!Utils.disableCheck) {
-            const {competition: {start, finish}} = this;
-
-            const now = Date.now();
-            if (now < start) return console.log(`COMPETITION IS NOT STARTED YET, PLEASE TRY AT ${start}`);
-            if (now > finish) return console.log(`COMPETITION IS ALREADY FINISHED ${finish}`);
-        }
-
         const signal = {
             direction: SignalDirection.OUT,
             type: SignalType.SIGNIN,
@@ -77,6 +71,34 @@ export class Account extends Base {
         }
     }
 
+    // --- SECTION [CONFIGURATION] -------------------------------------------------------------------------------------
+
+    public async starmap() {
+        const {constellations: constellations1} = await Config.load('FEDERATION' as Quadrants);
+        const {constellations: constellations2} = await Config.load('DSI' as Quadrants);
+
+        const constellations = constellations1.concat(constellations2);
+        const quadrants = {FEDERATION: constellations1, DSI: constellations2};
+
+        return {starmap: {constellations, quadrants}};
+    }
+
+    public async skills(type: number) {
+        if (type === 61 || type === 68) {
+            return {skills: []};
+        } else {
+            const {abilities: skills} = await Config.load(`3-abilities/${type}`);
+
+            return {skills}
+        }
+    }
+
+    public async slots(type: number) {
+        const {slots} = await Config.load(`1-slots/${type}`);
+
+        return {slots};
+    }
+
     // --- SECTION [METHODS] -------------------------------------------------------------------------------------------
 
     @Base.request(SignalType.RECEIVE_SEARCH)
@@ -96,39 +118,6 @@ export class Account extends Base {
             direction: SignalDirection.OUT,
             type: SignalType.RANKINGS,
             payload: {count, offset},
-            emitter: [],
-            catcher: []
-        } as any;
-    }
-
-    @Base.request(SignalType.STARMAP)
-    public async starmap(quadrant: Quadrants): Promise<any> {
-        return {
-            direction: SignalDirection.OUT,
-            type: SignalType.STARMAP,
-            payload: {quadrant},
-            emitter: [],
-            catcher: []
-        } as any;
-    }
-
-    @Base.request(SignalType.SKILLS)
-    public async skills(type: number): Promise<any> {
-        return {
-            direction: SignalDirection.OUT,
-            type: SignalType.SKILLS,
-            payload: {type},
-            emitter: [],
-            catcher: []
-        } as any;
-    }
-
-    @Base.request('SLOTS' as SignalType)
-    public async slots(type: number): Promise<any> {
-        return {
-            direction: SignalDirection.OUT,
-            type: 'SLOTS' as SignalType,
-            payload: {type},
             emitter: [],
             catcher: []
         } as any;
@@ -307,35 +296,10 @@ export class Account extends Base {
     // --- METHODS [STATIC] --------------------------------------------------------------------------------------------
 
     public static async connect(): Promise<Account> {
-        // --- CHECK COMPETITION SIGNATURE -----------------------------------------------------------------------------
-        let response: any = {};
-        if (!Utils.disableCheck) {
-            try {
-                const admin = await Admin.connect();
-                response = await admin.last();
-                await admin.dispose();
-            } catch (e) {
-                console.log('SERVICE IS TEMPORARILY UNAVAILABLE');
-                process.exit();
-            }
-
-            const {competition: {id, version, start, finish}} = response;
-
-            console.log(`VERSION: [${version}]`);
-            console.log(`COMPETITION: SPRINT ${id}`);
-            console.log(`DEPLOY [${start}] CET TIME`);
-            console.log(`FINISH [${finish}] CET TIME`);
-            console.log('\n');
-
-            const json = require('../../../../../../package.json');
-            if (json.version !== version) throw new Error(`ERROR: PLEASE UPDATE @CYBERSPACE-DEV/SDK FROM ${json.version} TO ${version}`);
-        }
-
         // -------------------------------------------------------------------------------------------------------------
         const {socket, subject} = await Base.connect('SERVICE', 'AUTH');
-        const {competition} = response;
 
-        return new Account(socket, subject, competition);
+        return new Account(socket, subject);
     }
 
 }

@@ -1,0 +1,164 @@
+{
+    "configs": [
+        {
+            "level": 1,
+            "modifiers": [
+                {
+                    "name": "PROTECTOR_REDUCE",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "name": "PROTECTOR_POWER_TOTAL",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "name": "PROTECTOR_POWER_CURRENT",
+                    "min": 100,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "modifiers": [
+                {
+                    "name": "PROTECTOR_REDUCE",
+                    "min": 2,
+                    "max": 6
+                },
+                {
+                    "name": "PROTECTOR_POWER_TOTAL",
+                    "min": 150,
+                    "max": 200
+                },
+                {
+                    "name": "PROTECTOR_POWER_CURRENT",
+                    "min": 100,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "modifiers": [
+                {
+                    "name": "PROTECTOR_REDUCE",
+                    "min": 7,
+                    "max": 11
+                },
+                {
+                    "name": "PROTECTOR_POWER_TOTAL",
+                    "min": 250,
+                    "max": 300
+                },
+                {
+                    "name": "PROTECTOR_POWER_CURRENT",
+                    "min": 100,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "level": 4,
+            "modifiers": [
+                {
+                    "name": "PROTECTOR_REDUCE",
+                    "min": 12,
+                    "max": 15
+                },
+                {
+                    "name": "PROTECTOR_POWER_TOTAL",
+                    "min": 350,
+                    "max": 400
+                },
+                {
+                    "name": "PROTECTOR_POWER_CURRENT",
+                    "min": 100,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "level": 5,
+            "modifiers": [
+                {
+                    "name": "PROTECTOR_REDUCE",
+                    "min": 16,
+                    "max": 20
+                },
+                {
+                    "name": "PROTECTOR_POWER_TOTAL",
+                    "min": 450,
+                    "max": 600
+                },
+                {
+                    "name": "PROTECTOR_POWER_CURRENT",
+                    "min": 100,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "modifiers": [
+                {
+                    "name": "PROTECTOR_REDUCE",
+                    "min": 21,
+                    "max": 25
+                },
+                {
+                    "name": "PROTECTOR_POWER_TOTAL",
+                    "min": 650,
+                    "max": 800
+                },
+                {
+                    "name": "PROTECTOR_POWER_CURRENT",
+                    "min": 100,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "level": 7,
+            "modifiers": [
+                {
+                    "name": "PROTECTOR_REDUCE",
+                    "min": 26,
+                    "max": 30
+                },
+                {
+                    "name": "PROTECTOR_POWER_TOTAL",
+                    "min": 850,
+                    "max": 1100
+                },
+                {
+                    "name": "PROTECTOR_POWER_CURRENT",
+                    "min": 100,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "level": 8,
+            "modifiers": [
+                {
+                    "name": "PROTECTOR_REDUCE",
+                    "min": 31,
+                    "max": 40
+                },
+                {
+                    "name": "PROTECTOR_POWER_TOTAL",
+                    "min": 1200,
+                    "max": 1500
+                },
+                {
+                    "name": "PROTECTOR_POWER_CURRENT",
+                    "min": 100,
+                    "max": 100
+                }
+            ]
+        }
+    ]
+}

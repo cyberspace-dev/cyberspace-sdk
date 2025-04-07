@@ -1,0 +1,29 @@
+{
+  "configs": [
+    {
+      "level": 1,
+      "modifiers": [
+        {
+          "name": "HULL_STRUCTURE_TOTAL",
+          "min": 100,
+          "max": 100
+        },
+        {
+          "name": "HULL_STRUCTURE_CURRENT",
+          "min": 100,
+          "max": 100
+        },
+        {
+          "name": "HULL_DEFENSE",
+          "min": 0,
+          "max": 0
+        },
+        {
+          "name": "HULL_ENGINE_SPEED_INC",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    }
+  ]
+}

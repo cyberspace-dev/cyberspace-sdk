@@ -3,20 +3,30 @@ import { Ship } from '../../play/nodes/signatures/ship/ship';
 import { Base } from '../../../base/base';
 import { IEntityModel } from '../../../../../openlib';
 import { IProfile } from '../../../../../openlib';
-import { Quadrants } from '../../../../../openlib';
 export declare class Account extends Base {
     socket: any;
     subject: Subject<any>;
-    competition: any;
     secure: string;
-    constructor(socket: any, subject: Subject<any>, competition: any);
+    constructor(socket: any, subject: Subject<any>);
     signin(email: string, password: string): Promise<any>;
     getShip(uuid: string): Promise<Ship>;
+    starmap(): Promise<{
+        starmap: {
+            constellations: any;
+            quadrants: {
+                FEDERATION: any;
+                DSI: any;
+            };
+        };
+    }>;
+    skills(type: number): Promise<{
+        skills: any;
+    }>;
+    slots(type: number): Promise<{
+        slots: any;
+    }>;
     search(uuidOrName: string): Promise<IProfile>;
     rankings(count: number, offset: number): Promise<Array<IProfile>>;
-    starmap(quadrant: Quadrants): Promise<any>;
-    skills(type: number): Promise<any>;
-    slots(type: number): Promise<any>;
     objects(count?: number, offset?: number): Promise<{
         objects: Array<IEntityModel>;
         hasNext: boolean;

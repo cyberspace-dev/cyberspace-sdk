@@ -1,0 +1,21 @@
+{
+  "slots": [
+    {"slot": "HULL", "max": 1, "type": 2201},
+    {"slot": "ENGINE", "max": 6, "type": 2202},
+    {"slot": "TANK", "max": 6, "type": 2203},
+    {"slot": "RADAR", "max": 7, "type": 2204},
+    {"slot": "SCANNER", "max": 7, "type": 2205},
+    {"slot": "DROID", "max": 5, "type": 2206},
+    {"slot": "GRIPPER", "max": 5, "type": 2207},
+    {"slot": "PROTECTOR", "max": 5, "type": 2208},
+    {"slot": "WEAPON1", "max": 8, "type": 22091},
+    {"slot": "WEAPON2", "max": 8, "type": 22091},
+    {"slot": "WEAPON3", "max": 8, "type": 22091},
+    {"slot": "WEAPON4", "max": 8, "type": 22091},
+    {"slot": "WEAPON5", "max": 8, "type": 22091},
+    {"slot": "ARTIFACT1", "max": 1, "type": 2210},
+    {"slot": "ARTIFACT2", "max": 1, "type": 2210},
+    {"slot": "ARTIFACT3", "max": 1, "type": 2210},
+    {"slot": "ARTIFACT4", "max": 1, "type": 2210}
+  ]
+}

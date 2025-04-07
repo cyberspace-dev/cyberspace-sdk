@@ -6,9 +6,11 @@
         "removeComments": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
+        "resolveJsonModule": true,
         "outDir": "lib/"
     },
     "include": [
-        "src/**/**.ts"
+        "src/**/**.ts",
+        "src/**/**.json"
     ]
 }

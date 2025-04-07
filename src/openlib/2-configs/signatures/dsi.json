@@ -1,0 +1,1132 @@
+{
+  "constellations": [
+    {
+      "name": "ANTLIA",
+      "systems": [
+        {
+          "uuid": "IOTA-ANTLIAE",
+          "type": 1,
+          "view": 6,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 27,
+              "y": 227,
+              "a": 0
+            },
+            "size": 40,
+            "creep": 69,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "ANTLIA",
+            "copulative": true
+          },
+          "nodes": [
+            {
+              "uuid": "IOTA-ANTLIAE-ALPHA-ANTLIAE",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 7500,
+                  "y": -7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "ALPHA-ANTLIAE",
+                "stargate": "ALPHA-ANTLIAE-IOTA-ANTLIAE"
+              }
+            },
+            {
+              "uuid": "IOTA-ANTLIAE-SCHEAT",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -11,
+                  "y": 915,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "SCHEAT",
+                "stargate": "SCHEAT-IOTA-ANTLIAE"
+              }
+            },
+            {
+              "uuid": "HODRARA",
+              "type": 4,
+              "view": 1551,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 2900,
+                "population": 0
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "ALPHA-ANTLIAE",
+          "type": 1,
+          "view": 3,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 160,
+              "y": 127,
+              "a": 0
+            },
+            "size": 30,
+            "creep": 691,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "ANTLIA"
+          },
+          "nodes": [
+            {
+              "uuid": "ALPHA-ANTLIAE-EPSILON-ANTLIAE",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 7500,
+                  "y": 7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "EPSILON-ANTLIAE",
+                "stargate": "EPSILON-ANTLIAE-ALPHA-ANTLIAE"
+              }
+            },
+            {
+              "uuid": "ALPHA-ANTLIAE-THETA-ANTLIAE",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 7500,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "THETA-ANTLIAE",
+                "stargate": "THETA-ANTLIAE-ALPHA-ANTLIAE"
+              }
+            },
+            {
+              "uuid": "ALPHA-ANTLIAE-IOTA-ANTLIAE",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -7500,
+                  "y": 7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "IOTA-ANTLIAE",
+                "stargate": "IOTA-ANTLIAE-ALPHA-ANTLIAE"
+              }
+            },
+            {
+              "uuid": "ETIS",
+              "type": 4,
+              "view": 1751,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 3500,
+                "population": 0
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "EPSILON-ANTLIAE",
+          "type": 1,
+          "view": 5,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 364,
+              "y": 272,
+              "a": 0
+            },
+            "size": 20,
+            "creep": 692,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "ANTLIA"
+          },
+          "nodes": [
+            {
+              "uuid": "EPSILON-ANTLIAE-ALPHA-ANTLIAE",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -7500,
+                  "y": -7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "ALPHA-ANTLIAE",
+                "stargate": "ALPHA-ANTLIAE-EPSILON-ANTLIAE"
+              }
+            },
+            {
+              "uuid": "EPSILON-ANTLIAE-THETA-ANTLIAE",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": -7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "THETA-ANTLIAE",
+                "stargate": "THETA-ANTLIAE-EPSILON-ANTLIAE"
+              }
+            },
+            {
+              "uuid": "OLNORIA",
+              "type": 4,
+              "view": 952,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {
+                  "_v": 0
+                },
+                "balance": 100000000,
+                "deals": [],
+                "radius": 4500,
+                "population": 0
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "THETA-ANTLIAE",
+          "type": 1,
+          "view": 8,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 349,
+              "y": 103,
+              "a": 0
+            },
+            "size": 10,
+            "creep": 693,
+            "boss": 694,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "ANTLIA"
+          },
+          "nodes": [
+            {
+              "uuid": "THETA-ANTLIAE-EPSILON-ANTLIAE",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "EPSILON-ANTLIAE",
+                "stargate": "EPSILON-ANTLIAE-THETA-ANTLIAE"
+              }
+            },
+            {
+              "uuid": "THETA-ANTLIAE-ALPHA-ANTLIAE",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -7500,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "ALPHA-ANTLIAE",
+                "stargate": "ALPHA-ANTLIAE-THETA-ANTLIAE"
+              }
+            },
+            {
+              "uuid": "ITERA",
+              "type": 4,
+              "view": 1511,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 60,
+                "effects": {
+                  "_v": 0
+                },
+                "balance": 100000000,
+                "deals": [],
+                "radius": 1800,
+                "population": 0
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 27,
+              "to": 160
+            },
+            "y": {
+              "from": 227,
+              "to": 127
+            }
+          }
+        },
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 160,
+              "to": 364
+            },
+            "y": {
+              "from": 127,
+              "to": 272
+            }
+          }
+        },
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 364,
+              "to": 349
+            },
+            "y": {
+              "from": 272,
+              "to": 103
+            }
+          }
+        },
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 349,
+              "to": 160
+            },
+            "y": {
+              "from": 103,
+              "to": 127
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "CAELUM",
+      "systems": [
+        {
+          "uuid": "BETA-CAELI",
+          "type": 1,
+          "view": 6,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 58,
+              "y": 41,
+              "a": 0
+            },
+            "size": 40,
+            "creep": 69,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "CAELUM",
+            "copulative": true
+          },
+          "nodes": [
+            {
+              "uuid": "BETA-CAELI-ANTARES",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -1500,
+                  "y": -900,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "ANTARES",
+                "stargate": "ANTARES-BETA-CAELI"
+              }
+            },
+            {
+              "uuid": "BETA-CAELI-GAMMA-1-CAELI",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 7500,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "GAMMA-1-CAELI",
+                "stargate": "GAMMA-1-CAELI-BETA-CAELI"
+              }
+            },
+            {
+              "uuid": "ALIV",
+              "type": 4,
+              "view": 142,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 90,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 1500,
+                "population": 0
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "GAMMA-1-CAELI",
+          "type": 1,
+          "view": 3,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 223,
+              "y": 87,
+              "a": 0
+            },
+            "size": 30,
+            "creep": 691,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "CAELUM"
+          },
+          "nodes": [
+            {
+              "uuid": "GAMMA-1-CAELI-ALPHA-CAELI",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "ALPHA-CAELI",
+                "stargate": "ALPHA-CAELI-GAMMA-1-CAELI"
+              }
+            },
+            {
+              "uuid": "GAMMA-1-CAELI-BETA-CAELI",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -7500,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "BETA-CAELI",
+                "stargate": "BETA-CAELI-GAMMA-1-CAELI"
+              }
+            },
+            {
+              "uuid": "YUPHUS",
+              "type": 4,
+              "view": 241,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 90,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 3100,
+                "population": 0
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "ALPHA-CAELI",
+          "type": 1,
+          "view": 3,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 244,
+              "y": 252,
+              "a": 0
+            },
+            "size": 20,
+            "creep": 692,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "CAELUM"
+          },
+          "nodes": [
+            {
+              "uuid": "ALPHA-CAELI-DELTA-CAELI",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 7500,
+                  "y": 7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "DELTA-CAELI",
+                "stargate": "DELTA-CAELI-ALPHA-CAELI"
+              }
+            },
+            {
+              "uuid": "ALPHA-CAELI-GAMMA-1-CAELI",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": -7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "GAMMA-1-CAELI",
+                "stargate": "GAMMA-1-CAELI-ALPHA-CAELI"
+              }
+            },
+            {
+              "uuid": "CHATIS",
+              "type": 4,
+              "view": 121,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 70,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 4500,
+                "population": 0
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "DELTA-CAELI",
+          "type": 1,
+          "view": 1,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 310,
+              "y": 357,
+              "a": 0
+            },
+            "size": 10,
+            "creep": 693,
+            "boss": 695,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "CAELUM"
+          },
+          "nodes": [
+            {
+              "uuid": "DELTA-CAELI-ALPHA-CAELI",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -7500,
+                  "y": -7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "ALPHA-CAELI",
+                "stargate": "ALPHA-CAELI-DELTA-CAELI"
+              }
+            },
+            {
+              "uuid": "TUCLITE",
+              "type": 4,
+              "view": 1451,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 5800,
+                "population": 0
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 58,
+              "to": 223
+            },
+            "y": {
+              "from": 41,
+              "to": 87
+            }
+          }
+        },
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 223,
+              "to": 244
+            },
+            "y": {
+              "from": 87,
+              "to": 252
+            }
+          }
+        },
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 244,
+              "to": 310
+            },
+            "y": {
+              "from": 252,
+              "to": 357
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "FORNAX",
+      "systems": [
+        {
+          "uuid": "DALIM",
+          "type": 1,
+          "view": 8,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 38,
+              "y": 132,
+              "a": 0
+            },
+            "size": 40,
+            "creep": 69,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "FORNAX",
+            "copulative": true
+          },
+          "nodes": [
+            {
+              "uuid": "DALIM-ETAMIN",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -1500,
+                  "y": -900,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "ETAMIN",
+                "stargate": "ETAMIN-DALIM"
+              }
+            },
+            {
+              "uuid": "DALIM-BETA-FORNACIS",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 7500,
+                  "y": -7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "BETA-FORNACIS",
+                "stargate": "BETA-FORNACIS-DALIM"
+              }
+            },
+            {
+              "uuid": "DALIM-NU-FORNACIS",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 7500,
+                  "y": 7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "NU-FORNACIS",
+                "stargate": "NU-FORNACIS-DALIM"
+              }
+            },
+            {
+              "uuid": "THONOV",
+              "type": 4,
+              "view": 1731,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 80,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 1900,
+                "population": 0
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "BETA-FORNACIS",
+          "type": 1,
+          "view": 7,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 147,
+              "y": 205,
+              "a": 0
+            },
+            "size": 30,
+            "creep": 691,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "FORNAX"
+          },
+          "nodes": [
+            {
+              "uuid": "BETA-FORNACIS-DALIM",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -7500,
+                  "y": 7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "DALIM",
+                "stargate": "DALIM-BETA-FORNACIS"
+              }
+            },
+            {
+              "uuid": "BETA-FORNACIS-OMEGA-FORNACIS",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 7500,
+                  "y": -7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "OMEGA-FORNACIS",
+                "stargate": "OMEGA-FORNACIS-BETA-FORNACIS"
+              }
+            },
+            {
+              "uuid": "CHOIBOS",
+              "type": 4,
+              "view": 751,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 2100,
+                "population": 0
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "NU-FORNACIS",
+          "type": 1,
+          "view": 5,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 221,
+              "y": 112,
+              "a": 0
+            },
+            "size": 20,
+            "creep": 692,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "FORNAX"
+          },
+          "nodes": [
+            {
+            "uuid": "NU-FORNACIS-DALIM",
+            "type": 57,
+            "view": 1,
+            "owner": "cyberspace",
+            "body": {
+              "vector": {
+                "x": -7500,
+                "y": -7500,
+                "a": 0
+              },
+              "size": 100,
+              "effects": {"_v": 0},
+              "balance": 0,
+              "system": "DALIM",
+              "stargate": "DALIM-NU-FORNACIS"
+            }
+          },
+            {
+              "uuid": "NU-FORNACIS-OMEGA-FORNACIS",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 7500,
+                  "y": 7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "OMEGA-FORNACIS",
+                "stargate": "OMEGA-FORNACIS-NU-FORNACIS"
+              }
+            },
+            {
+              "uuid": "GAZAO",
+              "type": 4,
+              "view": 1732,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 80,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 3600,
+                "population": 0
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "OMEGA-FORNACIS",
+          "type": 1,
+          "view": 3,
+          "owner": "mineroid",
+          "body": {
+            "vector": {
+              "x": 360,
+              "y": 143,
+              "a": 0
+            },
+            "size": 10,
+            "creep": 693,
+            "boss": 696,
+            "effects": {
+              "_v": 0
+            },
+            "security": "RISKY",
+            "quadrant": "DSI",
+            "constellation": "FORNAX"
+          },
+          "nodes": [
+            {
+              "uuid": "OMEGA-FORNACIS-NU-FORNACIS",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -7500,
+                  "y": -7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "NU-FORNACIS",
+                "stargate": "NU-FORNACIS-OMEGA-FORNACIS"
+              }
+            },
+            {
+              "uuid": "OMEGA-FORNACIS-BETA-FORNACIS",
+              "type": 57,
+              "view": 1,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": -7500,
+                  "y": 7500,
+                  "a": 0
+                },
+                "size": 100,
+                "effects": {"_v": 0},
+                "balance": 0,
+                "system": "BETA-FORNACIS",
+                "stargate": "BETA-FORNACIS-OMEGA-FORNACIS"
+              }
+            },
+            {
+              "uuid": "EBRONE",
+              "type": 4,
+              "view": 842,
+              "owner": "cyberspace",
+              "body": {
+                "vector": {
+                  "x": 0,
+                  "y": 0,
+                  "a": 0
+                },
+                "size": 90,
+                "effects": {"_v": 0},
+                "balance": 100000000,
+                "deals": [],
+                "radius": 5100,
+                "population": 0
+              }
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 38,
+              "to": 147
+            },
+            "y": {
+              "from": 132,
+              "to": 205
+            }
+          }
+        },
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 147,
+              "to": 360
+            },
+            "y": {
+              "from": 205,
+              "to": 143
+            }
+          }
+        },
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 221,
+              "to": 360
+            },
+            "y": {
+              "from": 112,
+              "to": 143
+            }
+          }
+        },
+        {
+          "type": "link",
+          "payload": {
+            "x": {
+              "from": 38,
+              "to": 221
+            },
+            "y": {
+              "from": 132,
+              "to": 112
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

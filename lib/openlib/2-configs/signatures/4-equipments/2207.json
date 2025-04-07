@@ -1,0 +1,84 @@
+{
+    "configs": [
+        {
+            "level": 1,
+            "modifiers": [
+                {
+                    "name": "GRIPPER_TRACTION",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "modifiers": [
+                {
+                    "name": "GRIPPER_TRACTION",
+                    "min": 25,
+                    "max": 25
+                }
+            ]
+        },
+        {
+            "level": 3,
+            "modifiers": [
+                {
+                    "name": "GRIPPER_TRACTION",
+                    "min": 50,
+                    "max": 50
+                }
+            ]
+        },
+        {
+            "level": 4,
+            "modifiers": [
+                {
+                    "name": "GRIPPER_TRACTION",
+                    "min": 75,
+                    "max": 75
+                }
+            ]
+        },
+        {
+            "level": 5,
+            "modifiers": [
+                {
+                    "name": "GRIPPER_TRACTION",
+                    "min": 125,
+                    "max": 125
+                }
+            ]
+        },
+        {
+            "level": 6,
+            "modifiers": [
+                {
+                    "name": "GRIPPER_TRACTION",
+                    "min": 150,
+                    "max": 150
+                }
+            ]
+        },
+        {
+            "level": 7,
+            "modifiers": [
+                {
+                    "name": "GRIPPER_TRACTION",
+                    "min": 175,
+                    "max": 175
+                }
+            ]
+        },
+        {
+            "level": 8,
+            "modifiers": [
+                {
+                    "name": "GRIPPER_TRACTION",
+                    "min": 200,
+                    "max": 200
+                }
+            ]
+        }
+    ]
+}

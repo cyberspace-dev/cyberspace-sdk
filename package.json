@@ -17,23 +17,22 @@
   "scripts": {
     "start": "node lib/index.js",
     "build": "tsc",
-    "update": "rm -rf ./src/openlib && cp -r ./../../../3-cluster/3-shared/src/openlib ./src/openlib",
+    "update": "rm -rf ./src/openlib && cp -r ./../../3-cluster/3-shared/src/openlib ./src/openlib",
     "release": "rm -rf src && npm publish --access public && git reset --hard HEAD",
     "postversion": "git push --tags && git push"
   },
   "dependencies": {
-    "delay": "^5.0.0",
-    "rxjs": "^7.5.6",
-    "socket.io-client": "^4.5.1",
-    "pify": "^5.0.0"
+    "rxjs": "^7.8.1",
+    "socket.io-client": "^4.6.2",
+    "pify": "^6.1.0"
   },
   "devDependencies": {
     "@types/delay": "^3.1.0",
     "@types/pify": "^5.0.1",
-    "@types/node": "^18.6.3",
+    "@types/node": "^20.2.5",
     "@types/socket.io-client": "^3.0.0",
     "ts-node": "^10.9.1",
-    "typescript": "^4.7.4"
+    "typescript": "^5.1.3"
   },
   "repository": {
     "type": "git",

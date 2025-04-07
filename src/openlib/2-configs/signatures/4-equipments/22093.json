@@ -1,0 +1,164 @@
+{
+  "configs": [
+    {
+      "level": 1,
+      "modifiers": [
+        {
+          "name": "WEAPON_DAMAGE",
+          "min": 3,
+          "max": 3
+        },
+        {
+          "name": "WEAPON_DELAY",
+          "min": 1000,
+          "max": 1000
+        },
+        {
+          "name": "WEAPON_RANGE",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "modifiers": [
+        {
+          "name": "WEAPON_DAMAGE",
+          "min": 4,
+          "max": 6
+        },
+        {
+          "name": "WEAPON_DELAY",
+          "min": 1000,
+          "max": 1000
+        },
+        {
+          "name": "WEAPON_RANGE",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "modifiers": [
+        {
+          "name": "WEAPON_DAMAGE",
+          "min": 8,
+          "max": 12
+        },
+        {
+          "name": "WEAPON_DELAY",
+          "min": 1000,
+          "max": 1000
+        },
+        {
+          "name": "WEAPON_RANGE",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "modifiers": [
+        {
+          "name": "WEAPON_DAMAGE",
+          "min": 14,
+          "max": 18
+        },
+        {
+          "name": "WEAPON_DELAY",
+          "min": 1000,
+          "max": 1000
+        },
+        {
+          "name": "WEAPON_RANGE",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "modifiers": [
+        {
+          "name": "WEAPON_DAMAGE",
+          "min": 22,
+          "max": 26
+        },
+        {
+          "name": "WEAPON_DELAY",
+          "min": 1000,
+          "max": 1000
+        },
+        {
+          "name": "WEAPON_RANGE",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "modifiers": [
+        {
+          "name": "WEAPON_DAMAGE",
+          "min": 28,
+          "max": 32
+        },
+        {
+          "name": "WEAPON_DELAY",
+          "min": 1000,
+          "max": 1000
+        },
+        {
+          "name": "WEAPON_RANGE",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "modifiers": [
+        {
+          "name": "WEAPON_DAMAGE",
+          "min": 34,
+          "max": 38
+        },
+        {
+          "name": "WEAPON_DELAY",
+          "min": 1000,
+          "max": 1000
+        },
+        {
+          "name": "WEAPON_RANGE",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "modifiers": [
+        {
+          "name": "WEAPON_DAMAGE",
+          "min": 42,
+          "max": 46
+        },
+        {
+          "name": "WEAPON_DELAY",
+          "min": 1000,
+          "max": 1000
+        },
+        {
+          "name": "WEAPON_RANGE",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    }
+  ]
+}

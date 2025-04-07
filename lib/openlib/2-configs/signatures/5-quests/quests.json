@@ -1,0 +1,170 @@
+{
+    "scenarios": [
+        {
+            "type": 11,
+            "steps": [
+                {
+                    "step": 1,
+                    "actions": [
+                        {
+                            "type": "LOOT_PROVIDE",
+                            "payload": {
+                                "type": 234,
+                                "payload": {
+                                    "value": "{{PARAM3}}"
+                                }
+                            }
+                        }
+                    ],
+                    "options": [
+                        {
+                            "id": 1,
+                            "conditions": [
+                                {
+                                    "type": "DESTINATION",
+                                    "value": "{{PARAM1}}"
+                                }
+                            ],
+                            "next": 10
+                        },
+                        {
+                            "id": 2,
+                            "conditions": [
+                                {
+                                    "type": "DESTINATION",
+                                    "value": "{{PARAM2}}"
+                                }
+                            ],
+                            "next": 20
+                        }
+                    ]
+                },
+                {
+                    "step": 10,
+                    "actions": [
+                        {
+                            "type": "LOOT_GET",
+                            "payload": {
+                                "value": "{{PARAM3}}"
+                            }
+                        },
+                        {
+                            "type": "BALANCE_POSITIVE",
+                            "payload": {
+                                "amount": 50
+                            }
+                        }
+                    ],
+                    "options": [
+                        {
+                            "id": 1,
+                            "conditions": [],
+                            "next": 0
+                        }
+                    ]
+                },
+                {
+                    "step": 20,
+                    "actions": [
+                        {
+                            "type": "BALANCE_NEGATIVE",
+                            "payload": {
+                                "amount": 25
+                            }
+                        }
+                    ],
+                    "options": [
+                        {
+                            "id": 1,
+                            "conditions": [],
+                            "next": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": 12,
+            "steps": [
+                {
+                    "step": 1,
+                    "actions": [
+                        {
+                            "type": "LOOT_PROVIDE",
+                            "payload": {
+                                "type": 234,
+                                "payload": {
+                                    "value": "{{PARAM3}}"
+                                }
+                            }
+                        }
+                    ],
+                    "options": [
+                        {
+                            "id": 1,
+                            "conditions": [
+                                {
+                                    "type": "DESTINATION",
+                                    "value": "{{PARAM1}}"
+                                }
+                            ],
+                            "next": 10
+                        },
+                        {
+                            "id": 2,
+                            "conditions": [
+                                {
+                                    "type": "DESTINATION",
+                                    "value": "{{PARAM2}}"
+                                }
+                            ],
+                            "next": 20
+                        }
+                    ]
+                },
+                {
+                    "step": 10,
+                    "actions": [
+                        {
+                            "type": "LOOT_GET",
+                            "payload": {
+                                "value": "{{PARAM3}}"
+                            }
+                        },
+                        {
+                            "type": "BALANCE_POSITIVE",
+                            "payload": {
+                                "amount": 100
+                            }
+                        }
+                    ],
+                    "options": [
+                        {
+                            "id": 1,
+                            "conditions": [],
+                            "next": 0
+                        }
+                    ]
+                },
+                {
+                    "step": 20,
+                    "actions": [
+                        {
+                            "type": "BALANCE_NEGATIVE",
+                            "payload": {
+                                "amount": 50
+                            }
+                        }
+                    ],
+                    "options": [
+                        {
+                            "id": 1,
+                            "conditions": [],
+                            "next": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

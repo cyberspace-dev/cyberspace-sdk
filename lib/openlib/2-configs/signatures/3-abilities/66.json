@@ -1,0 +1,11 @@
+{
+    "abilities": [
+        { "type": 661, "level": 6, "max": 3, "position": { "x": 1, "y": 1 } },
+        { "type": 662, "level": 6, "max": 1, "position": { "x": 2, "y": 1 } },
+        { "type": 663, "level": 8, "max": 1, "position": { "x": 2, "y": 3 } },
+        { "type": 664, "level": 7, "max": 1, "position": { "x": 3, "y": 2 } },
+        { "type": 665, "level": 8, "max": 2, "position": { "x": 1, "y": 3 } },
+        { "type": 666, "level": 9, "max": 1, "position": { "x": 3, "y": 4 } },
+        { "type": 667, "level": 10, "max": 1, "position": { "x": 2, "y": 5 } }
+    ]
+}
