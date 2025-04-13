@@ -4,7 +4,6 @@ export class Utils {
 
     public static host          : string = 'https://cyberspace.dev';
     public static isAuthorized  : boolean = true;
-    public static disableCheck  : boolean = false;
 
     // --- METHODS [PUBLIC] --------------------------------------------------------------------------------------------
 
